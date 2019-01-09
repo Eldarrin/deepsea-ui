@@ -36,8 +36,8 @@ import accessibleStyles from '@patternfly/patternfly-next/utilities/Accessibilit
 import spacingStyles from '@patternfly/patternfly-next/utilities/Spacing/spacing.css';
 import { css } from '@patternfly/react-styles';
 import { BellIcon, CogIcon } from '@patternfly/react-icons';
-import brandImg from './brand_logo_white.svg'; // './l_pf-reverse-164x11.png';
-import avatarImg from './avatar.png';
+import brandImg from '../images/brand_logo_white.svg'; // './l_pf-reverse-164x11.png';
+import avatarImg from '../images/avatar.png';
 
 import DashboardBottomSection from './Dashboard';
 import SimpleModal from './SimpleModal';
@@ -46,111 +46,9 @@ import SimpleTable from './SimpleTable';
 import {ChartTheme} from "@patternfly/react-charts";
 //import PageTopSectionEnrolment from './PageTopSectionEnrolment';
 
-class PageTopSectionEnrolment extends React.Component {
-    render () {
-        return (
-            <PageSection variant={PageSectionVariants.light}>
-                <Grid>
-                    <GridItem lg={6}>
-                        <TextContent>
-                            <Text component="h1">Enrolment <b>Short Bank</b></Text>
-                        </TextContent>
-                    </GridItem>
-                    <GridItem lg={6}>
-                        <TextContent>
-                            <div style={{textAlign: "right"}}>
-                                <SimpleModal/>
-                            </div>
-                        </TextContent>
-                    </GridItem>
-                </Grid>
 
-            </PageSection>
-        )
-    }
-}
 
-class PageTopSection extends React.Component {
-    render () {
-        return (
-            <PageSection variant={PageSectionVariants.light}>
-                <TextContent>
-                    <Text component="h1">Dashboard</Text>
-                    <Text component="p">
-                        Body text should be Overpass Regular at 16px. It should have leading of 24px because <br />
-                        of it’s relative line height of 1.5.
-                    </Text>
-                </TextContent>
-            </PageSection>
-        )
-    }
-}
 
-class TestAPI extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state = {
-                pictures: [],
-            };
-        }
-
-        componentDidMount() {
-            fetch('https://randomuser.me/api/?results=5')
-              .then(results => {
-                  return results.json();
-              }).then(data => {
-                  let pictures = data.results.map((pic) => {
-                      return(
-                        <div key={pic.results}>
-                            <img src={pic.picture.medium} />
-                        </div>
-                      )
-                  })
-                this.setState({pictures: pictures});
-                  console.log("state", this.state.pictures);
-            })
-        }
-
-        render() {
-                  return (
-                    <div className="container2">
-                        <div className="container1">
-                            {this.state.pictures}
-                        </div>
-                    </div>
-                  )
-        }
-}
-
-class PageBottomSectionEnrolment extends React.Component {
-        render() {
-            let chartDataToday = [{ x: 'Premium', y: 155 }];
-            chartDataToday.push({ x: 'Standard', y: 125 });
-            chartDataToday.push({ x: 'Basic', y: 35 });
-            let chartDataThisMonth = [{ x: 'Premium', y: 3055 }];
-            chartDataThisMonth.push({ x: 'Standard', y: 1525 });
-            chartDataThisMonth.push({ x: 'Basic', y: 375 });
-            return (
-            <PageSection>
-                <Grid gutter="md">
-                    <GridItem lg={1}>
-                        <SimpleChart isLegend={true} clientName={"Short Bank"} title={"Today"}/>
-                    </GridItem>
-                    <GridItem lg={2}>
-                        <SimpleChart chartData={chartDataToday} clientName={"Short Bank"} title={"Today"}/>
-                    </GridItem>
-                    <GridItem lg={2}>
-                        <SimpleChart chartData={chartDataThisMonth} clientName={"Short Bank"} title={"This Month"}/>
-                    </GridItem>
-                    <GridItem lg={1}/>
-                    <GridItem lg={6}>
-                        <TestAPI/>
-                    </GridItem>
-                </Grid>
-            </PageSection>
-            )
-        }
-}
 
 
 class PageLayoutHorizontalNav extends React.Component {

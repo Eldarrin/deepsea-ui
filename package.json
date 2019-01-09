@@ -7,6 +7,7 @@
     "@patternfly/react-charts": "^1.2.4",
     "@patternfly/react-core": "^1.44.2",
     "@patternfly/react-icons": "latest",
+    "@patternfly/react-styles": "^2.3.0",
     "@patternfly/react-table": "^0.2.39",
     "@patternfly/react-tokens": "latest",
     "react": "^16.7.0",
