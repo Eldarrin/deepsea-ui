@@ -14,16 +14,18 @@ class App extends React.Component {
       [BackgroundImageSrc.filter]: '/assets/images/background-filter.svg#image_overlay'
     };
 
+    let userData = { "username" : "Andy Ward", "avatarimg" : "/images/avatar.png"};
+
     return (
       <React.Fragment>
-        <BackgroundImage src={bgImages} />
+        <BackgroundImage src={bgImages}/>
         <Page>
-          <Header/>
+          <Header userData={userData}/>
           <Enrolment/>
 
         </Page>
       </React.Fragment>
-  )
+    )
   }
 }
 

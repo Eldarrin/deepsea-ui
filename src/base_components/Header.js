@@ -24,7 +24,6 @@ import spacingStyles from '@patternfly/patternfly-next/utilities/Spacing/spacing
 import { css } from '@patternfly/react-styles';
 import { BellIcon, CogIcon } from '@patternfly/react-icons';
 import brandImg from '../images/brand_logo_white.svg';
-import avatarImg from '../images/avatar.png';
 
 class Header extends React.Component {
   constructor(props) {
@@ -77,6 +76,33 @@ class Header extends React.Component {
 
   render() {
     const { isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen } = this.state;
+
+    let menu = [{ "menuId" : 0, "menuName" : "Dashboard"},
+      { "menuId" : 1, "menuName" : "Policy"},
+      { "menuId" : 2, "menuName" : "Claim"},
+      { "menuId" : 3, "menuName" : "Actuarial"},
+      { "menuId" : 4, "menuName" : "Other"},
+    ];
+
+    let menus = menu.map((mnu) => {
+      return(
+        <NavItem to="#" itemId={mnu.menuId} isActive={activeItem === mnu.menuId}>
+          {mnu.menuName}
+        </NavItem>
+      )
+    });
+
+    console.log(menu);
+
+    const PageNav2 = (
+      <Nav onSelect={this.onNavSelect} aria-label="Nav">
+        <NavList variant={NavVariants.horizontal}>
+          {this.menus}
+        </NavList>
+      </Nav>
+    );
+
+    console.log(PageNav2);
 
     const PageNav = (
       <Nav onSelect={this.onNavSelect} aria-label="Nav">
@@ -149,7 +175,7 @@ class Header extends React.Component {
               position="right"
               onSelect={this.onDropdownSelect}
               isOpen={isDropdownOpen}
-              toggle={<DropdownToggle onToggle={this.onDropdownToggle}>Andy Ward</DropdownToggle>}
+              toggle={<DropdownToggle onToggle={this.onDropdownToggle}>{this.props.userData.username}</DropdownToggle>}
               dropdownItems={userDropdownItems}
             />
           </ToolbarItem>
@@ -161,7 +187,7 @@ class Header extends React.Component {
       <PageHeader
         logo={<Brand src={brandImg} alt="Deepsea Logo" />}
         toolbar={PageToolbar}
-        avatar={<Avatar src={avatarImg} alt="Andy Ward" />}
+        avatar={<Avatar src={this.props.userData.avatarimg} alt={this.props.userData.username} />}
         topNav={PageNav}
       />
     );
