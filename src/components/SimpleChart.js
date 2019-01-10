@@ -46,11 +46,9 @@ class SimpleChart extends React.Component {
         />
     );
 
-    getLegend = (theme, horizontal) => (
+    getLegend = (theme, horizontal, chartLegend) => (
         <ChartLegend
-            data={[
-                { name: 'Premium' }, { name: 'Standard' }, { name: 'Basic' }
-            ]}
+            data={chartLegend}
             orientation={horizontal ? 'horizontal' : 'vertical'}
             theme={theme}
             y={horizontal ? 0 : 55}
@@ -67,7 +65,7 @@ class SimpleChart extends React.Component {
         if (this.props.isLegend) {
             return (
                 <GridItem span={2}>
-                    {this.getLegend(ChartTheme.light.blue, false)}
+                    {this.getLegend(ChartTheme.light.blue, false, this.props.chartLegend)}
                 </GridItem>
             );
         } else {

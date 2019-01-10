@@ -34,6 +34,7 @@ class Header extends React.Component {
       isDropdownOpen: false,
       isKebabDropdownOpen: false,
       activeItem: 0,
+      menus: [],
       isNavOpen
     };
   }
@@ -74,57 +75,50 @@ class Header extends React.Component {
     });
   };
 
-  render() {
-    const { isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen } = this.state;
-
-    let menu = [{ "menuId" : 0, "menuName" : "Dashboard"},
-      { "menuId" : 1, "menuName" : "Policy"},
-      { "menuId" : 2, "menuName" : "Claim"},
-      { "menuId" : 3, "menuName" : "Actuarial"},
-      { "menuId" : 4, "menuName" : "Other"},
+  componentDidMount() {
+    /*
+    fetch('http://deepsea-ui-menu.xxx.xxx/api/menu/')
+      .then(menu => {
+        return menu.json();
+      }).then(data => {
+      let menus = data.results.map((mnu) => {
+        return(
+          <NavItem key={mnu.menuId} to={'#nav-link' + mnu.menuId} itemId={mnu.menuId} >
+          {mnu.menuName}
+        </NavItem>
+        )
+      })
+      this.setState({menus:menus});
+    })
+     */
+    let menu = [{ "menuId" : 0, "menuName" : "Dashboard", "navLink" : "#"},
+      { "menuId" : 1, "menuName" : "Policy", "navLink" : "#"},
+      { "menuId" : 2, "menuName" : "Claim", "navLink" : "#"},
+      { "menuId" : 3, "menuName" : "Actuarial", "navLink" : "#"},
+      { "menuId" : 4, "menuName" : "Other", "navLink" : "#"},
     ];
 
     let menus = menu.map((mnu) => {
       return(
-        <NavItem to="#" itemId={mnu.menuId} isActive={activeItem === mnu.menuId}>
+        <NavItem key={mnu.menuId} to={mnu.navLink} itemId={mnu.menuId} >
           {mnu.menuName}
         </NavItem>
       )
     });
+    this.setState({menus:menus});
+  }
 
-    console.log(menu);
-
-    const PageNav2 = (
-      <Nav onSelect={this.onNavSelect} aria-label="Nav">
-        <NavList variant={NavVariants.horizontal}>
-          {this.menus}
-        </NavList>
-      </Nav>
-    );
-
-    console.log(PageNav2);
+  render() {
+    const { isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen } = this.state;
 
     const PageNav = (
       <Nav onSelect={this.onNavSelect} aria-label="Nav">
         <NavList variant={NavVariants.horizontal}>
-          <NavItem to="#nav-link1" itemId={0} isActive={activeItem === 0}>
-            Dashboard
-          </NavItem>
-          <NavItem to="#nav-link2" itemId={1} isActive={activeItem === 1}>
-            Policy
-          </NavItem>
-          <NavItem to="#nav-link3" itemId={2} isActive={activeItem === 2}>
-            Claim
-          </NavItem>
-          <NavItem to="#nav-link4" itemId={3} isActive={activeItem === 3}>
-            Actuarial
-          </NavItem>
-          <NavItem to="#nav-link5" itemId={4} isActive={activeItem === 4}>
-            Other
-          </NavItem>
+          {this.state.menus}
         </NavList>
       </Nav>
     );
+
     const kebabDropdownItems = [
       <DropdownItem>
         <BellIcon /> Notifications
@@ -187,7 +181,7 @@ class Header extends React.Component {
       <PageHeader
         logo={<Brand src={brandImg} alt="Deepsea Logo" />}
         toolbar={PageToolbar}
-        avatar={<Avatar src={this.props.userData.avatarimg} alt={this.props.userData.username} />}
+        avatar={<Avatar src={this.props.userData.avatarImg} alt={this.props.userData.username} />}
         topNav={PageNav}
       />
     );

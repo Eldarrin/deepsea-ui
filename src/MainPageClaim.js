@@ -1,44 +1,12 @@
 import React from 'react';
-import {Page, PageSection, BackgroundImage, BackgroundImageSrc} from '@patternfly/react-core';
+import {Page, BackgroundImage, BackgroundImageSrc} from '@patternfly/react-core';
 import Header from './base_components/Header';
 import Enrolment from './components/Enrolment/Enrolment';
 import Claim from './components/Claim/Claim';
 import SimpleLoginPage from './components/SimpleLoginPage';
 
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      element: Enrolment,
-      enrolment: false,
-      mainElement: null,
-    };
-
-  };
-
-  components = {
-    enrolment: Enrolment,
-    claim: Claim,
-  };
-
-  getMainElement()
-  {
-    const EnrolElement = this.components.enrolment;
-    const ClaimElement = this.components.claim;
-    if (this.state.enrolment) {
-      return <EnrolElement/>
-    } else {
-      return <ClaimElement/>
-    }
-
-  }
-
-  handleClick() {
-    this.state.enrolment = !this.state.enrolment;
-    this.setState({mainElement: this.getMainElement()})
-  }
-
+class MainPage extends React.Component {
   render() {
     const bgImages = {
       [BackgroundImageSrc.lg]: '/images/deepsea_1200.jpg',
@@ -54,12 +22,9 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <BackgroundImage src={bgImages}/>
-        <Page onClick={() => this.handleClick()}>
-          <Header userData={userData} />
-          {this.state.mainElement}
-
-
-
+        <Page>
+          <Header userData={userData}/>
+          <Claim/>
 
         </Page>
       </React.Fragment>
@@ -69,7 +34,7 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default MainPage;
 
 /*
 

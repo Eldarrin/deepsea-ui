@@ -40,7 +40,7 @@ import brandImg from '../images/brand_logo_white.svg'; // './l_pf-reverse-164x11
 import avatarImg from '../images/avatar.png';
 
 import DashboardBottomSection from './Dashboard';
-import SimpleModal from './SimpleModal';
+import EnrolmentForm from './Enrolment/EnrolmentForm';
 import SimpleChart from "./SimpleChart";
 import SimpleTable from './SimpleTable';
 import {ChartTheme} from "@patternfly/react-charts";
