@@ -1,51 +1,15 @@
 import React from "react";
 import {
-  BackgroundImage,
   Grid,
-  GridItem, Page,
+  GridItem,
   PageSection,
   PageSectionVariants,
   Text,
-  TextContent
+  TextContent, TextVariants
 } from "@patternfly/react-core";
-import SimpleModal from "./SimpleModal";
-import SimpleChart from "./SimpleChart";
-
-class TestAPI extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pictures: [],
-    };
-  }
-
-  componentDidMount() {
-    fetch('https://randomuser.me/api/?results=5')
-      .then(results => {
-        return results.json();
-      }).then(data => {
-      let pictures = data.results.map((pic) => {
-        return(
-          <div key={pic.results}>
-            <img src={pic.picture.medium} />
-          </div>
-        )
-      })
-      this.setState({pictures: pictures});
-      console.log("state", this.state.pictures);
-    })
-  }
-
-  render() {
-    return (
-      <div className="container2">
-        <div className="container1">
-          {this.state.pictures}
-        </div>
-      </div>
-    )
-  }
-}
+import EnrolmentForm from "./EnrolmentForm";
+import SimpleChart from "../SimpleChart";
+import EnrolmentTasks from './EnrolmentTasks';
 
 class PageTopSectionEnrolment extends React.Component {
   render () {
@@ -60,7 +24,7 @@ class PageTopSectionEnrolment extends React.Component {
           <GridItem lg={6}>
             <TextContent>
               <div style={{textAlign: "right"}}>
-                <SimpleModal/>
+                <EnrolmentForm/>
               </div>
             </TextContent>
           </GridItem>
@@ -92,7 +56,7 @@ class PageBottomSectionEnrolment extends React.Component {
           </GridItem>
           <GridItem lg={1}/>
           <GridItem lg={6}>
-            <TestAPI/>
+              <EnrolmentTasks/>
           </GridItem>
         </Grid>
       </PageSection>

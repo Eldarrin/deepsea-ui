@@ -1,8 +1,8 @@
 import React from 'react';
 import { Modal, Button } from '@patternfly/react-core';
-import SimpleForm from './SimpleForm';
+import SimpleForm from '../SimpleForm';
 
-class SimpleModal extends React.Component {
+class EnrolmentForm extends React.Component {
     state = {
         isModalOpen: false
     };
@@ -41,4 +41,4 @@ class SimpleModal extends React.Component {
     }
 }
 
-export default SimpleModal;
+export default EnrolmentForm;
