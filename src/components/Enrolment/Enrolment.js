@@ -42,11 +42,14 @@ class PageBottomSectionEnrolment extends React.Component {
     let chartDataThisMonth = [{ x: 'Premium', y: 3055 }];
     chartDataThisMonth.push({ x: 'Standard', y: 1525 });
     chartDataThisMonth.push({ x: 'Basic', y: 375 });
+    let chartLegend = [
+      { name: 'Premium' }, { name: 'Standard' }, { name: 'Basic' }
+    ];
     return (
       <PageSection>
         <Grid gutter="md">
           <GridItem lg={1}>
-            <SimpleChart isLegend={true} clientName={"Short Bank"} title={"Today"}/>
+            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={"Short Bank"} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
             <SimpleChart chartData={chartDataToday} clientName={"Short Bank"} title={"Today"}/>
