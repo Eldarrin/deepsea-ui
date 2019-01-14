@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Button,
   Grid,
   GridItem,
   PageSection,
@@ -7,12 +8,25 @@ import {
   Text,
   TextContent, TextVariants
 } from "@patternfly/react-core";
-import EnrolmentForm from "./EnrolmentForm";
+import EnrolmentModal from "./EnrolmentModal";
+import EnrolmentForm from './EnrolmentForm';
 import SimpleChart from "../SimpleChart";
-import EnrolmentTasks from './EnrolmentTasks';
+import PageBottomSectionDashboard from './EnrolmentDash';
+import Claim from "../Claim/Claim";
+
+const mainComponents = {
+  enrolment: EnrolmentForm,
+  dashboard: PageBottomSectionDashboard,
+};
+
+function getBottomElement() {
+  const EnrolElement = mainComponents.enrolment;
+  const DashElement = mainComponents.dashboard;
+  return <EnrolElement/>
+}
 
 class PageTopSectionEnrolment extends React.Component {
-  render () {
+  render() {
     return (
       <PageSection variant={PageSectionVariants.light}>
         <Grid>
@@ -24,7 +38,8 @@ class PageTopSectionEnrolment extends React.Component {
           <GridItem lg={6}>
             <TextContent>
               <div style={{textAlign: "right"}}>
-                <EnrolmentForm/>
+                <Button>Search</Button>{' '}
+                <Button onClick={this.props.handleClick}>New Enrolment</Button>
               </div>
             </TextContent>
           </GridItem>
@@ -36,43 +51,40 @@ class PageTopSectionEnrolment extends React.Component {
 
 class PageBottomSectionEnrolment extends React.Component {
   render() {
-    let chartDataToday = [{ x: 'Premium', y: 155 }];
-    chartDataToday.push({ x: 'Standard', y: 125 });
-    chartDataToday.push({ x: 'Basic', y: 35 });
-    let chartDataThisMonth = [{ x: 'Premium', y: 3055 }];
-    chartDataThisMonth.push({ x: 'Standard', y: 1525 });
-    chartDataThisMonth.push({ x: 'Basic', y: 375 });
     return (
       <PageSection>
-        <Grid gutter="md">
-          <GridItem lg={1}>
-            <SimpleChart isLegend={true} clientName={"Short Bank"} title={"Today"}/>
-          </GridItem>
-          <GridItem lg={2}>
-            <SimpleChart chartData={chartDataToday} clientName={"Short Bank"} title={"Today"}/>
-          </GridItem>
-          <GridItem lg={2}>
-            <SimpleChart chartData={chartDataThisMonth} clientName={"Short Bank"} title={"This Month"}/>
-          </GridItem>
-          <GridItem lg={1}/>
-          <GridItem lg={6}>
-              <EnrolmentTasks/>
-          </GridItem>
-        </Grid>
+        <TextContent>
+          This is the form
+        </TextContent>
       </PageSection>
     )
   }
 }
 
+
 class Enrolment extends React.Component {
-            render() {
-              return (
-                <React.Fragment>
-                    <PageTopSectionEnrolment/>
-                    <PageBottomSectionEnrolment/>
-                </React.Fragment>
-              );
-            }
+  constructor(props) {
+    super(props);
+    this.state = {
+      bottomSection: null,
+    };
+    this.handleClick = this.handleClick.bind(this);
+
+  };
+
+  handleClick() {
+    //alert('boom');
+    this.setState({bottomSection: getBottomElement()});
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <PageTopSectionEnrolment handleClick={this.handleClick}/>
+        {this.state.bottomSection}
+      </React.Fragment>
+    );
+  }
 }
 
 export default Enrolment;
