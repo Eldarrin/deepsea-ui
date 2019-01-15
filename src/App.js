@@ -18,7 +18,7 @@ import {
   Dropdown,
   KebabToggle, DropdownToggle, PageHeader, Brand, Avatar
 } from '@patternfly/react-core';
-import Enrolment from './components/Enrolment/Enrolment';
+import Policy from './components/Policy/Policy';
 import Claim from './components/Claim/Claim';
 import SimpleLoginPage from './components/SimpleLoginPage';
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
@@ -31,7 +31,7 @@ import brandImg from "./images/brand_logo_white.svg";
 let mainPage = 'blank';
 
 const mainComponents = {
-  enrolment: Enrolment,
+  enrolment: Policy,
   claim: Claim,
 };
 
@@ -222,7 +222,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      element: Enrolment,
+      element: Policy,
       enrolment: false,
       mainElement: null,
     };

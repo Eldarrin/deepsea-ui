@@ -1,7 +1,7 @@
 import React from 'react';
 import {Page, BackgroundImage, BackgroundImageSrc} from '@patternfly/react-core';
 import Header from './base_components/Header';
-import Enrolment from './components/Enrolment/Enrolment';
+import Policy from './components/Policy/Policy';
 import Claim from './components/Claim/Claim';
 import SimpleLoginPage from './components/SimpleLoginPage';
 

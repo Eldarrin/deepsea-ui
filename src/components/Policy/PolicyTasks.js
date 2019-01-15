@@ -13,9 +13,9 @@ import {
 import {BellIcon, CogIcon} from "@patternfly/react-icons";
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
 import KebabDropDown from '../KebabDropdown';
-import SimpleModal from "./Enrolment";
+import SimpleModal from "./Policy";
 
-class EnrolmentTasks extends React.Component {
+class PolicyTasks extends React.Component {
   constructor(props) {
     super(props);
     // Set initial isNavOpen state based on window width
@@ -58,7 +58,7 @@ class EnrolmentTasks extends React.Component {
         <Grid>
           <GridItem lg={6}>
             <TextContent>
-              <Text component={TextVariants.h3}>Enrolment Tasks</Text>
+              <Text component={TextVariants.h3}>Policy Tasks</Text>
             </TextContent>
           </GridItem>
           <GridItem lg={6}>
@@ -106,4 +106,4 @@ class EnrolmentTasks extends React.Component {
   }
 }
 
-export default EnrolmentTasks;
+export default PolicyTasks;

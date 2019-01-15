@@ -11,8 +11,10 @@ import {
 import EnrolmentModal from "./EnrolmentModal";
 import EnrolmentForm from './EnrolmentForm';
 import SimpleChart from "../SimpleChart";
-import PageBottomSectionDashboard from './EnrolmentDash';
+import PageBottomSectionDashboard from './PolicyDash';
 import Claim from "../Claim/Claim";
+
+let bottomFrame = 'dash';
 
 const mainComponents = {
   enrolment: EnrolmentForm,
@@ -22,24 +24,28 @@ const mainComponents = {
 function getBottomElement() {
   const EnrolElement = mainComponents.enrolment;
   const DashElement = mainComponents.dashboard;
-  return <EnrolElement/>
-}
+  if (bottomFrame === 'dash') {
+    return <DashElement/>
+  } else {
+    return <EnrolElement/>
+  }
+};
 
-class PageTopSectionEnrolment extends React.Component {
+class PageTopSectionPolicy extends React.Component {
   render() {
     return (
       <PageSection variant={PageSectionVariants.light}>
         <Grid>
           <GridItem lg={6}>
             <TextContent>
-              <Text component="h1">Enrolment <b>Short Bank</b></Text>
+              <Text component="h1">Policy <b>Short Bank</b></Text>
             </TextContent>
           </GridItem>
           <GridItem lg={6}>
             <TextContent>
               <div style={{textAlign: "right"}}>
                 <Button>Search</Button>{' '}
-                <Button onClick={this.props.handleClick}>New Enrolment</Button>
+                <Button onClick={() => {this.props.handleClick('enrolment')}}>New Policy</Button>
               </div>
             </TextContent>
           </GridItem>
@@ -49,42 +55,33 @@ class PageTopSectionEnrolment extends React.Component {
   }
 }
 
-class PageBottomSectionEnrolment extends React.Component {
-  render() {
-    return (
-      <PageSection>
-        <TextContent>
-          This is the form
-        </TextContent>
-      </PageSection>
-    )
-  }
-}
-
-
-class Enrolment extends React.Component {
+class Policy extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       bottomSection: null,
     };
     this.handleClick = this.handleClick.bind(this);
-
   };
 
-  handleClick() {
+  componentDidMount() {
+    this.setState({bottomSection: getBottomElement()});
+  }
+
+  handleClick(val) {
     //alert('boom');
+    bottomFrame = val;
     this.setState({bottomSection: getBottomElement()});
   };
 
   render() {
     return (
       <React.Fragment>
-        <PageTopSectionEnrolment handleClick={this.handleClick}/>
+        <PageTopSectionPolicy handleClick={this.handleClick}/>
         {this.state.bottomSection}
       </React.Fragment>
     );
   }
 }
 
-export default Enrolment;
+export default Policy;

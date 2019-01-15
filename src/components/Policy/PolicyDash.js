@@ -1,7 +1,7 @@
 import React from "react";
 import {Grid, GridItem, PageSection} from "@patternfly/react-core";
-import SimpleChart from "./Enrolment";
-import EnrolmentTasks from './EnrolmentTasks';
+import SimpleChart from "../SimpleChart";
+import PolicyTasks from './PolicyTasks';
 
 class PageBottomSectionDashboard extends React.Component {
   render() {
@@ -28,7 +28,7 @@ class PageBottomSectionDashboard extends React.Component {
           </GridItem>
           <GridItem lg={1}/>
           <GridItem lg={6}>
-            <EnrolmentTasks/>
+            <PolicyTasks/>
           </GridItem>
         </Grid>
       </PageSection>

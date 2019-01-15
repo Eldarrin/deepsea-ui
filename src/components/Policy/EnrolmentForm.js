@@ -9,14 +9,16 @@ import {
     ToolbarGroup,
     Button,
     Radio,
-  TextContent
+  TextContent,
+  PageSection, Grid, GridItem
 } from '@patternfly/react-core';
 
 class EnrolmentForm extends React.Component {
     state = {
         value1: '',
         value2: '',
-        value3: ''
+        value3: '',
+      value4: '',
     };
 
     handleTextInputChange1 = value1 => {
@@ -32,9 +34,10 @@ class EnrolmentForm extends React.Component {
     };
 
     render() {
-        const { value1, value2, value3 } = this.state;
+        const { value1, value2, value3, value4 } = this.state;
 
         return (
+          <PageSection>
             <Form isHorizontal>
               <TextContent>
                 Insurance
@@ -55,11 +58,13 @@ class EnrolmentForm extends React.Component {
                 AccNo/Sortcode/IBAN
 
               </TextContent>
+              <Grid gutter="md">
+                <GridItem lg={4}>
                 <FormGroup
-                    label="Required Name"
+                    label="Full Name"
                     isRequired
                     fieldId="simple-form-name"
-                    helperText="Please provide your full name"
+
                 >
                     <TextInput
                         isRequired
@@ -71,7 +76,7 @@ class EnrolmentForm extends React.Component {
                         onChange={this.handleTextInputChange1}
                     />
                 </FormGroup>
-                <FormGroup label="Required Email" isRequired fieldId="simple-form-email"
+                <FormGroup label="Email" isRequired fieldId="simple-form-email"
                            helperTextInvalid="Your email is not in a correct format"
                 >
                     <TextInput
@@ -84,6 +89,19 @@ class EnrolmentForm extends React.Component {
                         onChange={this.handleTextInputChange2}
                     />
                 </FormGroup>
+                  <FormGroup label="Date of Birth" isRequired fieldId="simple-form-dateofbirth"
+                                          helperTextInvalid="Your date is not in a correct format"
+                  >
+                    <TextInput
+                      isRequired
+                      type="date"
+                      id="simple-form-dateofbirth"
+                      name="simple-form-dateofbirth"
+                      isValid={true}
+                      value={value4}
+
+                    />
+                  </FormGroup>
                 <FormGroup label="Phone number" isRequired fieldId="simple-form-number">
                     <TextInput
                         isRequired
@@ -108,7 +126,16 @@ class EnrolmentForm extends React.Component {
                 <FormGroup fieldId="checkbox1">
                     <Checkbox label="I'd like updates via email" id="checkbox1" name="checkbox1" aria-label="Update via email" />
                 </FormGroup>
+                </GridItem>
+                <GridItem lg={4}>
+                  <TextContent>Stuff</TextContent>
+                </GridItem>
+                <GridItem lg={4}>
+                  <TextContent>Stuff</TextContent>
+                </GridItem>
+              </Grid>
             </Form>
+          </PageSection>
         );
     }
 }
