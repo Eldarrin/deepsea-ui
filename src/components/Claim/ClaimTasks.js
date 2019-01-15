@@ -8,12 +8,12 @@ import {
   DataListAction,
   Grid,
   Text,
-  TextVariants, GridItem, DropdownItem, KebabToggle, Dropdown, TextContent
+  TextVariants, GridItem, DropdownItem, TextContent
 } from '@patternfly/react-core';
 import {BellIcon, CogIcon} from "@patternfly/react-icons";
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
 import KebabDropDown from '../KebabDropdown';
-import SimpleModal from "./Claim";
+import {claimTasks} from "../../integration/Integration";
 
 class ClaimTasks extends React.Component {
   constructor(props) {
@@ -43,13 +43,9 @@ class ClaimTasks extends React.Component {
   };
 
   componentDidMount() {
-    let taskList = [{ "taskId" : 0, "taskTitle" : "Acc Dam Claim", "taskName" : "Andrew Ward", "taskText" : "Claim Date: 10th Feb, 2019"},
-      { "taskId" : 1, "taskTitle" : "Loss Claim", "taskName" : "Fred West", "taskText" : "Claim Date: 15th Feb, 2019"},
-    ];
-
-    let tasks = taskList.map((tsk) => {
+    let tasks = claimTasks.map((tsk) => {
       return(
-        <DataListItem aria-labelledby="check-action-item1">
+        <DataListItem key={tsk.taskId} aria-labelledby="check-action-item1">
           <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
           <DataListCell>
             <span id="check-action-item1">{tsk.taskName}</span><br/>{tsk.taskText}

@@ -5,17 +5,12 @@ import {
     ChartPie
 } from '@patternfly/react-charts';
 import {
-    Grid,
     GridItem,
     Text,
     TextVariants
 } from '@patternfly/react-core';
 
 class SimpleChart extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     getChart = (theme, chartData) => (
         <ChartPie
            /* data={[

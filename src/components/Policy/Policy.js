@@ -6,29 +6,16 @@ import {
   PageSection,
   PageSectionVariants,
   Text,
-  TextContent, TextVariants
+  TextContent
 } from "@patternfly/react-core";
-import EnrolmentModal from "./EnrolmentModal";
 import EnrolmentForm from './EnrolmentForm';
-import SimpleChart from "../SimpleChart";
 import PageBottomSectionDashboard from './PolicyDash';
-import Claim from "../Claim/Claim";
 
 let bottomFrame = 'dash';
 
 const mainComponents = {
   enrolment: EnrolmentForm,
   dashboard: PageBottomSectionDashboard,
-};
-
-function getBottomElement(client) {
-  const EnrolElement = mainComponents.enrolment;
-  const DashElement = mainComponents.dashboard;
-  if (bottomFrame === 'dash') {
-    return <DashElement client={client}/>
-  } else {
-    return <EnrolElement client={client}/>
-  }
 };
 
 class PageTopSectionPolicy extends React.Component {
@@ -64,14 +51,28 @@ class Policy extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   };
 
+  getBottomElement(client, cancelHandler) {
+    const EnrolElement = mainComponents.enrolment;
+    const DashElement = mainComponents.dashboard;
+    if (bottomFrame === 'dash') {
+      return <DashElement client={client}/>
+    } else {
+      return <EnrolElement client={client} cancelHandler={cancelHandler}/>
+    }
+  };
+
+  setDash() {
+    bottomFrame = 'dash';
+    this.setState({bottomSection: this.getBottomElement(this.props.client)});
+  };
+
   componentDidMount() {
-    this.setState({bottomSection: getBottomElement(this.props.client)});
+    this.setState({bottomSection: this.getBottomElement(this.props.client)});
   }
 
   handleClick(val) {
-    //alert('boom');
     bottomFrame = val;
-    this.setState({bottomSection: getBottomElement(this.props.client)});
+    this.setState({bottomSection: this.getBottomElement(this.props.client, () => this.setDash())});
   };
 
   render() {

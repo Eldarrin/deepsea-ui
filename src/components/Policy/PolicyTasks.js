@@ -8,12 +8,12 @@ import {
   DataListAction,
   Grid,
   Text,
-  TextVariants, GridItem, DropdownItem, KebabToggle, Dropdown, TextContent, NavItem
+  TextVariants, GridItem, DropdownItem, TextContent
 } from '@patternfly/react-core';
 import {BellIcon, CogIcon} from "@patternfly/react-icons";
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
 import KebabDropDown from '../KebabDropdown';
-import SimpleModal from "./Policy";
+import {policyTasks} from '../../integration/Integration';
 
 class PolicyTasks extends React.Component {
   constructor(props) {
@@ -43,13 +43,9 @@ class PolicyTasks extends React.Component {
   };
 
   componentDidMount() {
-    let taskList = [{ "taskId" : 0, "taskTitle" : "Premium Policy Submission", "taskName" : "Andrew Ward", "taskText" : "Start Date: 10th Feb, 2019"},
-      { "taskId" : 1, "taskTitle" : "Basic Policy Submission", "taskName" : "Fred West", "taskText" : "Start Date: 15th Feb, 2019"},
-    ];
-
-    let tasks = taskList.map((tsk) => {
+    let tasks = policyTasks.map((tsk) => {
       return(
-        <DataListItem aria-labelledby="check-action-item1">
+        <DataListItem key={tsk.taskId} aria-labelledby="check-action-item1">
           <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
           <DataListCell>
             <span id="check-action-item1">{tsk.taskName}</span><br/>{tsk.taskText}

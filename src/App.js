@@ -25,10 +25,9 @@ import { css } from '@patternfly/react-styles';
 import accessibleStyles from "@patternfly/patternfly-next/utilities/Accessibility/accessibility.css";
 import spacingStyles from "@patternfly/patternfly-next/utilities/Spacing/spacing.css";
 import brandImg from "./images/brand_logo_white.svg";
+import {clientData, userData, menu} from './integration/Integration';
 
 let mainPage = 'blank';
-let clientData = { "clientName" : "Brian's Bank" };
-let userData = { "username" : "Andy Ward", "avatarImg" : "/images/avatar.png"};
 
 const mainComponents = {
   policy: Policy,
@@ -37,15 +36,13 @@ const mainComponents = {
 
 function getMainElement(client)
 {
-  //alert(mainPage);
   const PolicyElement = mainComponents.policy;
   const ClaimElement = mainComponents.claim;
   if (mainPage === 'policy') {
     return <PolicyElement client={client}/>
-  } else {
+  } else if (mainPage === 'claim'){
     return <ClaimElement client={client}/>
   }
-
 }
 
 
@@ -120,12 +117,6 @@ class Header extends React.Component {
       this.setState({menus:menus});
     })
      */
-    let menu = [{ "menuId" : 0, "menuName" : "Dashboard", "menuPage" : "blank", "navLink" : "#"},
-      { "menuId" : 1, "menuName" : "Policy", "menuPage" : "policy", "navLink" : "#"},
-      { "menuId" : 2, "menuName" : "Claim", "menuPage" : "claim", "navLink" : "#"},
-      { "menuId" : 3, "menuName" : "Actuarial", "menuPage" : "blank", "navLink" : "#"},
-      { "menuId" : 4, "menuName" : "Other", "menuPage" : "blank", "navLink" : "#"},
-    ];
 
     let menus = menu.map((mnu) => {
       return(
@@ -231,9 +222,6 @@ class App extends React.Component {
   };
 
   handleClick() {
-    if (mainPage === "blank") {
-      return;
-    }
     this.setState({mainElement: getMainElement(clientData.clientName)})
   }
 

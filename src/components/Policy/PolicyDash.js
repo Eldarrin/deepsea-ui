@@ -2,29 +2,21 @@ import React from "react";
 import {Grid, GridItem, PageSection} from "@patternfly/react-core";
 import SimpleChart from "../SimpleChart";
 import PolicyTasks from './PolicyTasks';
+import { policyChartDataToday, policyChartDataThisMonth, policyChartLegend} from "../../integration/Integration";
 
 class PageBottomSectionDashboard extends React.Component {
   render() {
-    let chartDataToday = [{x: 'Premium', y: 155}];
-    chartDataToday.push({x: 'Standard', y: 125});
-    chartDataToday.push({x: 'Basic', y: 35});
-    let chartDataThisMonth = [{x: 'Premium', y: 3055}];
-    chartDataThisMonth.push({x: 'Standard', y: 1525});
-    chartDataThisMonth.push({x: 'Basic', y: 375});
-    let chartLegend = [
-      {name: 'Premium'}, {name: 'Standard'}, {name: 'Basic'}
-    ];
     return (
       <PageSection>
         <Grid gutter="md">
           <GridItem lg={1}>
-            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={this.props.client} title={"Today"}/>
+            <SimpleChart chartLegend={policyChartLegend} isLegend={true} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataToday} clientName={this.props.client} title={"Today"}/>
+            <SimpleChart chartData={policyChartDataToday} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataThisMonth} clientName={this.props.client} title={"This Month"}/>
+            <SimpleChart chartData={policyChartDataThisMonth} clientName={this.props.client} title={"This Month"}/>
           </GridItem>
           <GridItem lg={1}/>
           <GridItem lg={6}>

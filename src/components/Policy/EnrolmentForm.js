@@ -1,17 +1,75 @@
 import React from 'react';
 import {
-    Form,
-    FormGroup,
-    TextInput,
-    Checkbox,
-    ActionGroup,
-    Toolbar,
-    ToolbarGroup,
-    Button,
-    Radio,
-  TextContent,
-  PageSection, Grid, GridItem
+  Form,
+  FormGroup,
+  TextInput,
+  Checkbox,
+  Dropdown,
+  DropdownToggle,
+  DropdownItem,
+  DropdownPosition,
+  TextArea,
+  Button,
+  Radio,
+  PageSection, Grid, GridItem,
+  Title, EmptyState, EmptyStateIcon, EmptyStateBody, Toolbar, ToolbarGroup, ActionGroup
 } from '@patternfly/react-core';
+import { CubesIcon } from '@patternfly/react-icons';
+
+class ProductDropdown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  onToggle = isOpen => {
+    this.setState({
+      isOpen
+    }) ;
+  };
+
+  onSelect = event => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  };
+
+  render() {
+    const { isOpen } = this.state;
+    const dropdownItems = [
+      <DropdownItem key="premium">Premium</DropdownItem>,
+      <DropdownItem key="premium">Standard</DropdownItem>,
+      <DropdownItem key="premium">Basic</DropdownItem>,
+    ];
+
+    return (
+      <Dropdown onSelect={this.onSelect}
+                toggle={<DropdownToggle onToggle={this.onToggle}>Please select your product...</DropdownToggle>}
+                isOpen={isOpen}
+                dropdownItems={dropdownItems}
+                position={DropdownPosition.right}
+                />
+    )
+  }
+
+}
+
+class SimpleEmptyState extends React.Component {
+  render() {
+    return (
+      <EmptyState>
+        <EmptyStateIcon icon={CubesIcon} />
+        <Title size="lg">Digital Signature</Title>
+        <EmptyStateBody>
+          This represents the digital signature frame; if required.
+        </EmptyStateBody>
+
+      </EmptyState>
+    );
+  }
+}
 
 class EnrolmentForm extends React.Component {
     state = {
@@ -39,25 +97,6 @@ class EnrolmentForm extends React.Component {
         return (
           <PageSection>
             <Form isHorizontal>
-              <TextContent>
-                Insurance
-                Product
-                Start Date
-                Agree terms
-                Digital Signature
-
-                Risk --- ???
-
-                Customer
-                Date of birth
-                Address
-                City
-                Postcode
-
-                Billing
-                AccNo/Sortcode/IBAN
-
-              </TextContent>
               <Grid gutter="md">
                 <GridItem lg={4}>
                 <FormGroup
@@ -76,6 +115,7 @@ class EnrolmentForm extends React.Component {
                         onChange={this.handleTextInputChange1}
                     />
                 </FormGroup>
+                  <br/>
                 <FormGroup label="Email" isRequired fieldId="simple-form-email"
                            helperTextInvalid="Your email is not in a correct format"
                 >
@@ -89,6 +129,7 @@ class EnrolmentForm extends React.Component {
                         onChange={this.handleTextInputChange2}
                     />
                 </FormGroup>
+                  <br/>
                   <FormGroup label="Date of Birth" isRequired fieldId="simple-form-dateofbirth"
                                           helperTextInvalid="Your date is not in a correct format"
                   >
@@ -102,6 +143,7 @@ class EnrolmentForm extends React.Component {
 
                     />
                   </FormGroup>
+                  <br/>
                 <FormGroup label="Phone number" isRequired fieldId="simple-form-number">
                     <TextInput
                         isRequired
@@ -113,25 +155,93 @@ class EnrolmentForm extends React.Component {
                         onChange={this.handleTextInputChange3}
                     />
                 </FormGroup>
-                <FormGroup isInline label="How can we contact you?" isRequired fieldId="inline-radio1">
+                  <br/>
+                  <FormGroup label="Address" isRequired fieldId="address">
+                    <TextArea
+                      isRequired
+                      id="address"
+                      value={' '}
+                      />
+                  </FormGroup>
+                  <p>&nbsp;<br/></p>
+                  <FormGroup label="Postcode" isRequired fieldId="postcode">
+                    <TextInput
+                      isRequired
+                      id="postcode"
+                      value={' '}
+                    />
+                  </FormGroup>
+
+                </GridItem>
+                <GridItem lg={4}>
+                  <FormGroup label="Product" isRequired fieldId="product">
+                    <ProductDropdown/>
+                  </FormGroup>
+                  <br/>
+                  <FormGroup label="Start Date" isRequired fieldId="simple-form-startdate"
+                             helperTextInvalid="Your date is not in a correct format"
+                  >
+                    <TextInput
+                      isRequired
+                      type="date"
+                      id="simple-form-startdate"
+                      name="simple-form-startdate"
+                      isValid={true}
+                      value={value4}
+
+                    />
+                  </FormGroup>
+                  <br/>
+                  <FormGroup label="Account No." isRequired fieldId="accnum">
+                    <TextInput
+                      isRequired
+                      id="accnum"
+                      value={' '}
+                    />
+                  </FormGroup>
+                  <br/>
+                  <FormGroup label="Sort Code" isRequired fieldId="sortcode">
+                    <TextInput
+                      isRequired
+                      id="sortcode"
+                      value={' '}
+                    />
+                  </FormGroup>
+                  <br/>
+                  <FormGroup fieldId="acceptTerms">
+                    <Checkbox label="Do you accept the terms and conditions?" id="acceptTerms" name="acceptTerms" aria-label="Accept terms" />
+                  </FormGroup>
+                  <br/>
+
+                  <FormGroup isInline label="How can we contact you?" fieldId="inline-radio1">
                     <Radio id="inlineradio1" name="inlineradios" label="Email" aria-label="Email" />
                     <Radio id="inlineradio2" name="inlineradios" label="Phone" aria-label="Phone" />
                     <Radio
-                        id="inlineradio3"
-                        name="inlineradios"
-                        label="Please don't contact me"
-                        aria-label="Please don't contact me"
+                      id="inlineradio3"
+                      name="inlineradios"
+                      label="Please don't contact me"
+                      aria-label="Please don't contact me"
                     />
-                </FormGroup>
-                <FormGroup fieldId="checkbox1">
+                  </FormGroup>
+                  <br/>
+                  <FormGroup fieldId="checkbox1">
                     <Checkbox label="I'd like updates via email" id="checkbox1" name="checkbox1" aria-label="Update via email" />
-                </FormGroup>
+                  </FormGroup>
                 </GridItem>
                 <GridItem lg={4}>
-                  <TextContent>Stuff</TextContent>
-                </GridItem>
-                <GridItem lg={4}>
-                  <TextContent>Stuff</TextContent>
+                  <SimpleEmptyState/>
+
+                  <br/>
+                  <ActionGroup>
+                    <Toolbar>
+                      <ToolbarGroup>
+                        <Button variant="primary">Submit policy</Button>
+                      </ToolbarGroup>
+                      <ToolbarGroup>
+                        <Button onClick={this.props.cancelHandler} variant="secondary">Cancel</Button>
+                      </ToolbarGroup>
+                    </Toolbar>
+                  </ActionGroup>
                 </GridItem>
               </Grid>
             </Form>

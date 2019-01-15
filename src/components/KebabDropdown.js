@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, KebabToggle, DropdownItem, DropdownSeparator } from '@patternfly/react-core';
+import { Dropdown, KebabToggle, DropdownItem } from '@patternfly/react-core';
 
 export default class KebabDropdown extends Component {
   constructor(props) {
