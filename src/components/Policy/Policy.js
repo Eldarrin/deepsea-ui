@@ -21,13 +21,13 @@ const mainComponents = {
   dashboard: PageBottomSectionDashboard,
 };
 
-function getBottomElement() {
+function getBottomElement(client) {
   const EnrolElement = mainComponents.enrolment;
   const DashElement = mainComponents.dashboard;
   if (bottomFrame === 'dash') {
-    return <DashElement/>
+    return <DashElement client={client}/>
   } else {
-    return <EnrolElement/>
+    return <EnrolElement client={client}/>
   }
 };
 
@@ -38,7 +38,7 @@ class PageTopSectionPolicy extends React.Component {
         <Grid>
           <GridItem lg={6}>
             <TextContent>
-              <Text component="h1">Policy <b>Short Bank</b></Text>
+              <Text component="h1">Policy <b>{this.props.client}</b></Text>
             </TextContent>
           </GridItem>
           <GridItem lg={6}>
@@ -65,19 +65,19 @@ class Policy extends React.Component {
   };
 
   componentDidMount() {
-    this.setState({bottomSection: getBottomElement()});
+    this.setState({bottomSection: getBottomElement(this.props.client)});
   }
 
   handleClick(val) {
     //alert('boom');
     bottomFrame = val;
-    this.setState({bottomSection: getBottomElement()});
+    this.setState({bottomSection: getBottomElement(this.props.client)});
   };
 
   render() {
     return (
       <React.Fragment>
-        <PageTopSectionPolicy handleClick={this.handleClick}/>
+        <PageTopSectionPolicy client={this.props.client} handleClick={this.handleClick}/>
         {this.state.bottomSection}
       </React.Fragment>
     );

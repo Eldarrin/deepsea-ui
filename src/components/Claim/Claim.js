@@ -18,7 +18,7 @@ class PageTopSectionClaim extends React.Component {
         <Grid>
           <GridItem lg={6}>
             <TextContent>
-              <Text component="h1">Claim <b>Short Bank</b></Text>
+              <Text component="h1">Claim <b>{this.props.client}</b></Text>
             </TextContent>
           </GridItem>
           <GridItem lg={6}>
@@ -49,13 +49,13 @@ class PageBottomSectionClaim extends React.Component {
       <PageSection>
         <Grid gutter="md">
           <GridItem lg={1}>
-            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={"Short Bank"} title={"Today"}/>
+            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataToday} clientName={"Short Bank"} title={"Today"}/>
+            <SimpleChart chartData={chartDataToday} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataThisMonth} clientName={"Short Bank"} title={"This Month"}/>
+            <SimpleChart chartData={chartDataThisMonth} clientName={this.props.client} title={"This Month"}/>
           </GridItem>
           <GridItem lg={1}/>
           <GridItem lg={6}>
@@ -71,8 +71,8 @@ class Claim extends React.Component {
             render() {
               return (
                 <React.Fragment>
-                    <PageTopSectionClaim/>
-                    <PageBottomSectionClaim/>
+                    <PageTopSectionClaim client={this.props.client}/>
+                    <PageBottomSectionClaim client={this.props.client}/>
                 </React.Fragment>
               );
             }

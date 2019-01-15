@@ -8,7 +8,7 @@ import {
   DataListAction,
   Grid,
   Text,
-  TextVariants, GridItem, DropdownItem, KebabToggle, Dropdown, TextContent
+  TextVariants, GridItem, DropdownItem, KebabToggle, Dropdown, TextContent, NavItem
 } from '@patternfly/react-core';
 import {BellIcon, CogIcon} from "@patternfly/react-icons";
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
@@ -25,6 +25,7 @@ class PolicyTasks extends React.Component {
       isKebabDropdownOpen: false,
       activeItem: 0,
       menus: [],
+      tasks: [],
       isNavOpen
     };
   }
@@ -40,6 +41,33 @@ class PolicyTasks extends React.Component {
       isKebabDropdownOpen: !this.state.isKebabDropdownOpen
     });
   };
+
+  componentDidMount() {
+    let taskList = [{ "taskId" : 0, "taskTitle" : "Premium Policy Submission", "taskName" : "Andrew Ward", "taskText" : "Start Date: 10th Feb, 2019"},
+      { "taskId" : 1, "taskTitle" : "Basic Policy Submission", "taskName" : "Fred West", "taskText" : "Start Date: 15th Feb, 2019"},
+    ];
+
+    let tasks = taskList.map((tsk) => {
+      return(
+        <DataListItem aria-labelledby="check-action-item1">
+          <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
+          <DataListCell>
+            <span id="check-action-item1">{tsk.taskName}</span><br/>{tsk.taskText}
+          </DataListCell>
+          <DataListCell>{tsk.taskTitle}</DataListCell>
+          <DataListAction
+            aria-labelledby="check-action-item1 check-action-action1"
+            id="check-action-action1"
+            aria-label="Actions"
+          >
+            <KebabDropDown/>
+          </DataListAction>
+
+        </DataListItem>
+      )
+    });
+    this.setState({tasks:tasks});
+  }
 
   render() {
     const {isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen} = this.state;
@@ -71,35 +99,8 @@ class PolicyTasks extends React.Component {
             </TextContent>
           </GridItem>
         </Grid>
-        <DataList aria-label="Checkbox and action data list example">
-          <DataListItem aria-labelledby="check-action-item1">
-            <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
-            <DataListCell>
-              <span id="check-action-item1">Andrew Ward</span><br/>Start Date: 10th Jan, 2019
-            </DataListCell>
-            <DataListCell>Premium Policy Submission</DataListCell>
-            <DataListAction
-              aria-labelledby="check-action-item1 check-action-action1"
-              id="check-action-action1"
-              aria-label="Actions"
-            >
-              <KebabDropDown/>
-            </DataListAction>
-
-          </DataListItem>
-          <DataListItem aria-labelledby="check-action-item2">
-            <DataListCheck aria-labelledby="check-action-item2" name="check-action-check2"/>
-            <DataListCell>
-              <span id="check-action-item2">Primary content - Lorem ipsum</span> dolor sit amet, consectetur adipisicing
-              elit, sed do eiusmod.
-            </DataListCell>
-            <DataListCell>Basic Policy Submission</DataListCell>
-            <DataListAction
-              aria-labelledby="check-action-item2 check-action-action2"
-              id="check-action-action2"
-              aria-label="Actions"
-            />
-          </DataListItem>
+        <DataList aria-label="policy-task-list">
+          {this.state.tasks}
         </DataList>
       </div>
     );

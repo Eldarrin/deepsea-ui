@@ -18,13 +18,13 @@ class PageBottomSectionDashboard extends React.Component {
       <PageSection>
         <Grid gutter="md">
           <GridItem lg={1}>
-            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={"Short Bank"} title={"Today"}/>
+            <SimpleChart chartLegend={chartLegend} isLegend={true} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataToday} clientName={"Short Bank"} title={"Today"}/>
+            <SimpleChart chartData={chartDataToday} clientName={this.props.client} title={"Today"}/>
           </GridItem>
           <GridItem lg={2}>
-            <SimpleChart chartData={chartDataThisMonth} clientName={"Short Bank"} title={"This Month"}/>
+            <SimpleChart chartData={chartDataThisMonth} clientName={this.props.client} title={"This Month"}/>
           </GridItem>
           <GridItem lg={1}/>
           <GridItem lg={6}>

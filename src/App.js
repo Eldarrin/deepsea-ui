@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Page,
-  PageSection,
   BackgroundImage,
   BackgroundImageSrc,
   NavItem,
@@ -20,7 +19,6 @@ import {
 } from '@patternfly/react-core';
 import Policy from './components/Policy/Policy';
 import Claim from './components/Claim/Claim';
-import SimpleLoginPage from './components/SimpleLoginPage';
 import {global_breakpoint_md as breakpointMd} from "@patternfly/react-tokens";
 import {BellIcon, CogIcon} from "@patternfly/react-icons";
 import { css } from '@patternfly/react-styles';
@@ -29,21 +27,23 @@ import spacingStyles from "@patternfly/patternfly-next/utilities/Spacing/spacing
 import brandImg from "./images/brand_logo_white.svg";
 
 let mainPage = 'blank';
+let clientData = { "clientName" : "Brian's Bank" };
+let userData = { "username" : "Andy Ward", "avatarImg" : "/images/avatar.png"};
 
 const mainComponents = {
-  enrolment: Policy,
+  policy: Policy,
   claim: Claim,
 };
 
-function getMainElement()
+function getMainElement(client)
 {
   //alert(mainPage);
-  const EnrolElement = mainComponents.enrolment;
+  const PolicyElement = mainComponents.policy;
   const ClaimElement = mainComponents.claim;
-  if (mainPage === 'enrolment') {
-    return <EnrolElement/>
+  if (mainPage === 'policy') {
+    return <PolicyElement client={client}/>
   } else {
-    return <ClaimElement/>
+    return <ClaimElement client={client}/>
   }
 
 }
@@ -99,7 +99,7 @@ class Header extends React.Component {
     });
   };
 
-  onNavClick(navClicked) {
+  static onNavClick(navClicked) {
     mainPage = navClicked;
     //alert(mainPage);
   };
@@ -121,7 +121,7 @@ class Header extends React.Component {
     })
      */
     let menu = [{ "menuId" : 0, "menuName" : "Dashboard", "menuPage" : "blank", "navLink" : "#"},
-      { "menuId" : 1, "menuName" : "Policy", "menuPage" : "enrolment", "navLink" : "#"},
+      { "menuId" : 1, "menuName" : "Policy", "menuPage" : "policy", "navLink" : "#"},
       { "menuId" : 2, "menuName" : "Claim", "menuPage" : "claim", "navLink" : "#"},
       { "menuId" : 3, "menuName" : "Actuarial", "menuPage" : "blank", "navLink" : "#"},
       { "menuId" : 4, "menuName" : "Other", "menuPage" : "blank", "navLink" : "#"},
@@ -129,7 +129,7 @@ class Header extends React.Component {
 
     let menus = menu.map((mnu) => {
       return(
-        <NavItem key={mnu.menuId} to={mnu.navLink} itemId={mnu.menuId} onClick={() => this.onNavClick(mnu.menuPage)}>
+        <NavItem key={mnu.menuId} to={mnu.navLink} itemId={mnu.menuId} onClick={() => Header.onNavClick(mnu.menuPage)}>
           {mnu.menuName}
         </NavItem>
       )
@@ -223,19 +223,18 @@ class App extends React.Component {
     super(props);
     this.state = {
       element: Policy,
-      enrolment: false,
       mainElement: null,
+      client: 'Short Bank',
     };
     this.handleClick = this.handleClick.bind(this);
 
   };
 
   handleClick() {
-    //alert(mainPage);
     if (mainPage === "blank") {
       return;
     }
-    this.setState({mainElement: getMainElement()})
+    this.setState({mainElement: getMainElement(clientData.clientName)})
   }
 
   render() {
@@ -247,8 +246,6 @@ class App extends React.Component {
       [BackgroundImageSrc.xs2x]: '/images/deepsea_567.jpg',
       [BackgroundImageSrc.filter]: '/assets/images/background-filter.svg#image_overlay'
     };
-
-    let userData = { "username" : "Andy Ward", "avatarImg" : "/images/avatar.png"};
 
     return (
       <React.Fragment>

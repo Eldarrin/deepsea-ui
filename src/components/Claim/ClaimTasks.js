@@ -25,6 +25,7 @@ class ClaimTasks extends React.Component {
       isKebabDropdownOpen: false,
       activeItem: 0,
       menus: [],
+      tasks: [],
       isNavOpen
     };
   }
@@ -40,6 +41,33 @@ class ClaimTasks extends React.Component {
       isKebabDropdownOpen: !this.state.isKebabDropdownOpen
     });
   };
+
+  componentDidMount() {
+    let taskList = [{ "taskId" : 0, "taskTitle" : "Acc Dam Claim", "taskName" : "Andrew Ward", "taskText" : "Claim Date: 10th Feb, 2019"},
+      { "taskId" : 1, "taskTitle" : "Loss Claim", "taskName" : "Fred West", "taskText" : "Claim Date: 15th Feb, 2019"},
+    ];
+
+    let tasks = taskList.map((tsk) => {
+      return(
+        <DataListItem aria-labelledby="check-action-item1">
+          <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
+          <DataListCell>
+            <span id="check-action-item1">{tsk.taskName}</span><br/>{tsk.taskText}
+          </DataListCell>
+          <DataListCell>{tsk.taskTitle}</DataListCell>
+          <DataListAction
+            aria-labelledby="check-action-item1 check-action-action1"
+            id="check-action-action1"
+            aria-label="Actions"
+          >
+            <KebabDropDown/>
+          </DataListAction>
+
+        </DataListItem>
+      )
+    });
+    this.setState({tasks:tasks});
+  }
 
   render() {
     const {isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen} = this.state;
@@ -71,35 +99,8 @@ class ClaimTasks extends React.Component {
             </TextContent>
           </GridItem>
         </Grid>
-        <DataList aria-label="Checkbox and action data list example">
-          <DataListItem aria-labelledby="check-action-item1">
-            <DataListCheck aria-labelledby="check-action-item1" name="check-action-check1"/>
-            <DataListCell>
-              <span id="check-action-item1">Andrew Ward</span><br/>Claim Date: 10th Jan, 2019
-            </DataListCell>
-            <DataListCell>Accidental Damage Claim Submission</DataListCell>
-            <DataListAction
-              aria-labelledby="check-action-item1 check-action-action1"
-              id="check-action-action1"
-              aria-label="Actions"
-            >
-              <KebabDropDown/>
-            </DataListAction>
-
-          </DataListItem>
-          <DataListItem aria-labelledby="check-action-item2">
-            <DataListCheck aria-labelledby="check-action-item2" name="check-action-check2"/>
-            <DataListCell>
-              <span id="check-action-item2">Primary content - Lorem ipsum</span> dolor sit amet, consectetur adipisicing
-              elit, sed do eiusmod.
-            </DataListCell>
-            <DataListCell>Loss Claim Submission</DataListCell>
-            <DataListAction
-              aria-labelledby="check-action-item2 check-action-action2"
-              id="check-action-action2"
-              aria-label="Actions"
-            />
-          </DataListItem>
+        <DataList aria-label="claim-task-list">
+          {this.state.tasks}
         </DataList>
       </div>
     );
