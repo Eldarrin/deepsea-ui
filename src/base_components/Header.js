@@ -9,10 +9,6 @@ import {
   DropdownItem,
   DropdownSeparator,
   KebabToggle,
-  Nav,
-  NavItem,
-  NavList,
-  NavVariants,
   PageHeader,
   Toolbar,
   ToolbarGroup,
@@ -24,6 +20,7 @@ import spacingStyles from '@patternfly/patternfly-next/utilities/Spacing/spacing
 import { css } from '@patternfly/react-styles';
 import { BellIcon, CogIcon } from '@patternfly/react-icons';
 import brandImg from '../images/brand_logo_white.svg';
+import PageNav from './PageNav';
 
 class Header extends React.Component {
   constructor(props) {
@@ -63,80 +60,22 @@ class Header extends React.Component {
     });
   };
 
-  onNavSelect = result => {
-    this.setState({
-      activeItem: result.itemId
-    });
-  };
-
-  onNavToggle = () => {
-    this.setState({
-      isNavOpen: !this.state.isNavOpen
-    });
-  };
-
-  componentDidMount() {
-    /*
-    fetch('http://deepsea-ui-menu.xxx.xxx/api/menu/')
-      .then(menu => {
-        return menu.json();
-      }).then(data => {
-      let menus = data.results.map((mnu) => {
-        return(
-          <NavItem key={mnu.menuId} to={'#nav-link' + mnu.menuId} itemId={mnu.menuId} >
-          {mnu.menuName}
-        </NavItem>
-        )
-      })
-      this.setState({menus:menus});
-    })
-     */
-    let menu = [{ "menuId" : 0, "menuName" : "Dashboard", "navLink" : "#"},
-      { "menuId" : 1, "menuName" : "Policy", "navLink" : "#"},
-      { "menuId" : 2, "menuName" : "Claim", "navLink" : "#"},
-      { "menuId" : 3, "menuName" : "Actuarial", "navLink" : "#"},
-      { "menuId" : 4, "menuName" : "Other", "navLink" : "#"},
-    ];
-
-    let menus = menu.map((mnu) => {
-      return(
-        <NavItem key={mnu.menuId} to={mnu.navLink} itemId={mnu.menuId} >
-          {mnu.menuName}
-        </NavItem>
-      )
-    });
-    this.setState({menus:menus});
-  }
-
   render() {
     const { isDropdownOpen, isKebabDropdownOpen, activeItem, isNavOpen } = this.state;
 
-    const PageNav = (
-      <Nav onSelect={this.onNavSelect} aria-label="Nav">
-        <NavList variant={NavVariants.horizontal}>
-          {this.state.menus}
-        </NavList>
-      </Nav>
-    );
-
     const kebabDropdownItems = [
-      <DropdownItem>
+      <DropdownItem key={0}>
         <BellIcon /> Notifications
       </DropdownItem>,
-      <DropdownItem>
+      <DropdownItem key={1}>
         <CogIcon /> Settings
       </DropdownItem>
     ];
     const userDropdownItems = [
-      <DropdownItem>Link</DropdownItem>,
-      <DropdownItem component="button">Action</DropdownItem>,
-      <DropdownItem isDisabled>Disabled Link</DropdownItem>,
-      <DropdownItem isDisabled component="button">
-        Disabled Action
-      </DropdownItem>,
-      <DropdownSeparator />,
-      <DropdownItem>Separated Link</DropdownItem>,
-      <DropdownItem component="button">Sign Out</DropdownItem>
+      <DropdownItem key={0} component="button">My Details</DropdownItem>,
+      <DropdownItem key={1} isDisabled>Disabled Link</DropdownItem>,
+      <DropdownItem key={2}>Separated Link</DropdownItem>,
+      <DropdownItem key={3} component="button">Sign Out</DropdownItem>
     ];
     const PageToolbar = (
       <Toolbar>
@@ -177,16 +116,14 @@ class Header extends React.Component {
       </Toolbar>
     );
 
-    const Header = (
+    return (
       <PageHeader
         logo={<Brand src={brandImg} alt="Deepsea Logo" />}
         toolbar={PageToolbar}
         avatar={<Avatar src={this.props.userData.avatarImg} alt={this.props.userData.username} />}
-        topNav={PageNav}
+        topNav={<PageNav handleClick={this.props.handleClick}/>}
       />
     );
-
-    return Header;
   }
 }
 

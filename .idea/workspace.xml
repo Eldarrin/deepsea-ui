@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15d1e49e-c3ac-4bf7-8c69-a5c1a81bfb8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/integration/Integration.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/base_components/PageNav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/deepsea_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/deepsea_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/deepsea_576.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/deepsea_576.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/deepsea_768.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/deepsea_768.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Claim/Claim.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Claim/Claim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Claim/ClaimTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Claim/ClaimTasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KebabDropdown.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KebabDropdown.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base_components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_components/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Policy/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Policy/PolicyTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/PolicyTasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SimpleChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SimpleChart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/integration/Integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration/Integration.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,12 +19,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1945">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="10">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -41,31 +33,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Claim/ClaimTasks.js">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
-              <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+            <state relative-caret-position="340">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#6320#6710#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Claim/Claim.js">
+        <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="301">
+              <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -74,10 +58,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyDash.js">
+        <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="901">
+              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -88,50 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SimpleChart.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyTasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -178,18 +120,19 @@
         <option value="$PROJECT_DIR$/src/components/Enrolment/Enrolment.js" />
         <option value="$PROJECT_DIR$/src/components/Enrolment/Policy.js" />
         <option value="$PROJECT_DIR$/src/components/Enrolment/PolicyTasks.js" />
-        <option value="$PROJECT_DIR$/src/base_components/Header.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/Enrolment.css" />
         <option value="$PROJECT_DIR$/src/components/SimpleChart.js" />
         <option value="$PROJECT_DIR$/src/components/KebabDropdown.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js" />
-        <option value="$PROJECT_DIR$/src/components/Policy/Policy.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/PolicyTasks.js" />
         <option value="$PROJECT_DIR$/src/components/Claim/ClaimTasks.js" />
-        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" />
         <option value="$PROJECT_DIR$/src/components/Claim/Claim.js" />
+        <option value="$PROJECT_DIR$/src/components/Policy/Policy.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
+        <option value="$PROJECT_DIR$/src/base_components/PageNav.js" />
+        <option value="$PROJECT_DIR$/src/base_components/Header.js" />
       </list>
     </option>
   </component>
@@ -205,6 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -243,11 +187,16 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Policy" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="deepsea-ui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deepsea-ui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +264,8 @@
       <workItem from="1546851731630" duration="13175000" />
       <workItem from="1546939741352" duration="15082000" />
       <workItem from="1547025882553" duration="3583000" />
-      <workItem from="1547544866707" duration="18126000" />
+      <workItem from="1547544866707" duration="18360000" />
+      <workItem from="1547638892502" duration="6473000" />
     </task>
     <task id="LOCAL-00001" summary="Playing with Navigation">
       <created>1547498281598</created>
@@ -338,11 +288,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547562575925</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Separated integration to a stub file">
+      <created>1547574042678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1547574042678</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60265000" />
+    <option name="totallyTimeSpent" value="66972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,7 +320,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32858837" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32858837" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,7 +343,8 @@
     <MESSAGE value="Playing with Navigation" />
     <MESSAGE value="Renamed Enrolment to Policy" />
     <MESSAGE value="Pass through client data and data driven task lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pass through client data and data driven task lists" />
+    <MESSAGE value="Separated integration to a stub file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separated integration to a stub file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/Avatar.js">
@@ -506,19 +464,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="77" column="23" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Policy/Enrolment.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Policy/Enrolment.css" />
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -585,16 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1945">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyTasks.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -606,23 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,8 +557,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Claim/Claim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="68">
           <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Mendix/Remus-main/theme/styles/css/custom/custom.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#6320#6710#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="77" column="26" selection-start-line="77" selection-start-column="26" selection-end-line="77" selection-end-column="26" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

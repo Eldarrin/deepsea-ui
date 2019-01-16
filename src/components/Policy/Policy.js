@@ -51,7 +51,7 @@ class Policy extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   };
 
-  getBottomElement(client, cancelHandler) {
+  static getBottomElement(client, cancelHandler) {
     const EnrolElement = mainComponents.enrolment;
     const DashElement = mainComponents.dashboard;
     if (bottomFrame === 'dash') {
@@ -63,16 +63,16 @@ class Policy extends React.Component {
 
   setDash() {
     bottomFrame = 'dash';
-    this.setState({bottomSection: this.getBottomElement(this.props.client)});
+    this.setState({bottomSection: Policy.getBottomElement(this.props.client)});
   };
 
   componentDidMount() {
-    this.setState({bottomSection: this.getBottomElement(this.props.client)});
+    this.setState({bottomSection: Policy.getBottomElement(this.props.client)});
   }
 
   handleClick(val) {
     bottomFrame = val;
-    this.setState({bottomSection: this.getBottomElement(this.props.client, () => this.setDash())});
+    this.setState({bottomSection: Policy.getBottomElement(this.props.client, () => this.setDash())});
   };
 
   render() {
