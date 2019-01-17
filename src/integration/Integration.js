@@ -1,6 +1,9 @@
 export const userData = { "username" : "Andy Ward", "avatarImg" : "/images/avatar.png"} ;
 export const clientData = { "clientName" : "SeaSurance" };
 
+export const scriptData = [{ "step" : 0, "stepName" : "Welcome", "stepScript" : "Hi there, Andy speaking, how may I help you today?", "nextStep" : 1 },
+  { "step" : 1, "stepName" : "Search Details", "stepScript" : "Could I please get your policy no?/name?/etc?", "nextStep" : 2 },
+  { "step" : 2, "stepName" : "Notice", "stepScript" : "Please note all calls are recorded...", "nextStep" : 0 }];
 /*
     fetch('http://deepsea-ui-menu.xxx.xxx/api/menu/')
       .then(menu => {

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15d1e49e-c3ac-4bf7-8c69-a5c1a81bfb8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/base_components/PageTopSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Agent/Agent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Claim/Claim.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Claim/Claim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Policy/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/Policy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base_components/PageToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_components/PageToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Agent/Agent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Agent/Agent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/integration/Integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration/Integration.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,10 +44,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyDash.js">
+        <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="27" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="11" selection-end-column="27" />
+              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -61,10 +56,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Claim/Claim.js">
+        <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="1" lean-forward="true" selection-start-line="13" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="-187">
+              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="103" column="51" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -73,10 +77,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
+        <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+            <state relative-caret-position="560">
+              <caret line="40" column="3" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -87,47 +91,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base_components/PageToolbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="102">
-                <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -135,8 +103,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="51">
+              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -196,10 +182,8 @@
         <option value="$PROJECT_DIR$/src/components/Policy/PolicyTasks.js" />
         <option value="$PROJECT_DIR$/src/components/Claim/ClaimTasks.js" />
         <option value="$PROJECT_DIR$/src/base_components/PageNav.js" />
-        <option value="$PROJECT_DIR$/src/base_components/PageToolbar.js" />
         <option value="$PROJECT_DIR$/src/base_components/Header.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
         <option value="$PROJECT_DIR$/src/components/Customer/Customer.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/PolicyDash.js" />
         <option value="$PROJECT_DIR$/src/base_components/PageTopSection.js" />
@@ -207,8 +191,10 @@
         <option value="$PROJECT_DIR$/src/components/Claim/Claim.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/Customer/Agent.js" />
-        <option value="$PROJECT_DIR$/src/components/Agent/Agent.js" />
+        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
+        <option value="$PROJECT_DIR$/src/base_components/PageToolbar.js" />
         <option value="$PROJECT_DIR$/src/components/Agent/AgentScript.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/Agent.js" />
       </list>
     </option>
   </component>
@@ -349,7 +335,7 @@
       <workItem from="1547025882553" duration="3583000" />
       <workItem from="1547544866707" duration="18360000" />
       <workItem from="1547638892502" duration="6614000" />
-      <workItem from="1547725757049" duration="8919000" />
+      <workItem from="1547725757049" duration="13533000" />
     </task>
     <task id="LOCAL-00001" summary="Playing with Navigation">
       <created>1547498281598</created>
@@ -393,11 +379,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547735848187</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding agent pages, and splitting roles">
+      <created>1547753077434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547753077434</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76032000" />
+    <option name="totallyTimeSpent" value="80646000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +403,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.23087339" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.23087339" />
@@ -422,11 +414,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32977462" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32977462" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32858837" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32977462" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3084223" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -444,7 +436,8 @@
     <MESSAGE value="Separated integration to a stub file" />
     <MESSAGE value="refactoring as I learn" />
     <MESSAGE value="refactored header" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored header" />
+    <MESSAGE value="adding agent pages, and splitting roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding agent pages, and splitting roles" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/Avatar.js">
@@ -516,17 +509,6 @@
           <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="146" column="33" selection-start-line="146" selection-start-column="33" selection-end-line="146" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#1058#1095#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -605,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -647,43 +622,6 @@
     </entry>
     <entry file="file://$USER_HOME$/Documents/Mendix/Remus-main/theme/styles/css/custom/custom.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base_components/PageToolbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -725,16 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/base_components/PageTopSection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -755,13 +683,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
+    <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="560">
+          <caret line="40" column="3" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="103" column="51" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base_components/PageToolbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
         </state>
       </provider>
     </entry>

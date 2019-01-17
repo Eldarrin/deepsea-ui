@@ -6,7 +6,7 @@ import {
   ButtonVariant,
   Dropdown,
   DropdownItem,
-  DropdownToggle,
+  DropdownToggle, KebabToggle,
   Toolbar,
   ToolbarGroup,
   ToolbarItem
@@ -14,6 +14,7 @@ import {
 import {BellIcon, CogIcon, ThIcon } from "@patternfly/react-icons";
 import { css } from '@patternfly/react-styles';
 import accessibleStyles from "@patternfly/patternfly-next/utilities/Accessibility/accessibility.css";
+import spacingStyles from "@patternfly/patternfly-next/utilities/Spacing/spacing.css";
 
 class PageToolbar extends React.Component {
   constructor(props) {
@@ -54,13 +55,24 @@ class PageToolbar extends React.Component {
   };
 
   render() {
-    const { isDropdownOpen } = this.state;
+    const { isDropdownOpen, isKebabDropdownOpen } = this.state;
 
+    // TODO: get correct userinfo from keycloak style json
     const userDropdownItems = [
       <DropdownItem key={0} component="button">My Details</DropdownItem>,
       <DropdownItem key={1} isDisabled>Disabled Link</DropdownItem>,
       <DropdownItem key={2}>Separated Link</DropdownItem>,
       <DropdownItem key={3} component="button">Sign Out</DropdownItem>
+    ];
+
+    // TODO: move kebab dropdown to appswitcher dropdown?
+    const kebabDropdownItems = [
+      <DropdownItem>
+        <BellIcon /> Change Client
+      </DropdownItem>,
+      <DropdownItem>
+        <CogIcon /> Other thing
+      </DropdownItem>
     ];
 
     return (
@@ -70,6 +82,16 @@ class PageToolbar extends React.Component {
             <Button id="horizontal-example-uid-00" aria-label="AppSwitcher actions" variant={ButtonVariant.plain}>
               <ThIcon />
             </Button>
+          </ToolbarItem>
+          <ToolbarItem className={css(accessibleStyles.hiddenOnLg, spacingStyles.mr_0)}>
+            <Dropdown
+              isPlain
+              position="right"
+              onSelect={this.onKebabDropdownSelect}
+              toggle={<KebabToggle onToggle={this.onKebabDropdownToggle} />}
+              isOpen={isKebabDropdownOpen}
+              dropdownItems={kebabDropdownItems}
+            />
           </ToolbarItem>
           <ToolbarItem>
             <Button id="horizontal-example-uid-01" aria-label="Notifications actions" variant={ButtonVariant.plain}>

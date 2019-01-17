@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Grid, GridItem, PageSection, TextContent, Text} from "@patternfly/react-core";
+import {Button, Grid, GridItem, PageSection, TextContent} from "@patternfly/react-core";
 import PageTopSection from '../../base_components/PageTopSection';
 import ScriptCard from './AgentScript';
 //import AgentForm from "../Agent/Agent";
@@ -9,11 +9,11 @@ class PageTopSectionAgent extends React.Component {
     return (
       <PageTopSection
         client={this.props.client}
-        title={'Agent'}
+        title={'Agent Desktop'}
         rightSection={<TextContent>
           <div style={{textAlign: "right"}}>
             <Button>Answer Call</Button>{' '}
-            <Button>Find Customer</Button>
+            <Button>New Customer</Button>
           </div>
         </TextContent>}
       />
