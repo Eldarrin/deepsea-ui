@@ -6,12 +6,14 @@ import {
 } from '@patternfly/react-core';
 import Policy from './components/Policy/Policy';
 import Claim from './components/Claim/Claim';
+import Agent from './components/Agent/Agent';
 import {clientData, userData} from './integration/Integration';
 import Header from './base_components/Header';
 
 const mainComponents = {
   policy: Policy,
   claim: Claim,
+  customer: Agent,
 };
 
 class App extends React.Component {
@@ -28,10 +30,13 @@ class App extends React.Component {
   {
     const PolicyElement = mainComponents.policy;
     const ClaimElement = mainComponents.claim;
+    const CustomerElement = mainComponents.customer;
     if (showPage === 'policy') {
       return <PolicyElement client={client}/>
     } else if (showPage === 'claim'){
       return <ClaimElement client={client}/>
+    } else if (showPage === 'customer') {
+      return <CustomerElement client={client}/>
     }
   }
 

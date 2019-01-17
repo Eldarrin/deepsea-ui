@@ -18,10 +18,11 @@ export const clientData = { "clientName" : "SeaSurance" };
      */
 
 export const menu = [{ "menuId" : 0, "menuName" : "Dashboard", "menuPage" : "blank", "navLink" : "#"},
-  { "menuId" : 1, "menuName" : "Policy", "menuPage" : "policy", "navLink" : "#"},
-  { "menuId" : 2, "menuName" : "Claim", "menuPage" : "claim", "navLink" : "#"},
-  { "menuId" : 3, "menuName" : "Actuarial", "menuPage" : "blank", "navLink" : "#"},
-  { "menuId" : 4, "menuName" : "Other", "menuPage" : "blank", "navLink" : "#"},
+  { "menuId" : 1, "menuName" : "Agent", "menuPage" : "customer", "navLink" : "#"},
+  { "menuId" : 2, "menuName" : "Policy", "menuPage" : "policy", "navLink" : "#"},
+  { "menuId" : 3, "menuName" : "Claim", "menuPage" : "claim", "navLink" : "#"},
+  { "menuId" : 4, "menuName" : "Actuarial", "menuPage" : "blank", "navLink" : "#"},
+  { "menuId" : 5, "menuName" : "Other", "menuPage" : "blank", "navLink" : "#"},
 ];
 
 export const policyTasks = [{ "taskId" : 0, "taskTitle" : "Premium Policy Submission", "taskName" : "Andrew Ward", "taskText" : "Start Date: 10th Feb, 2019"},

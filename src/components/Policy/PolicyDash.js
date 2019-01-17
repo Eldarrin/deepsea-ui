@@ -11,6 +11,16 @@ class PageBottomSectionDashboard extends React.Component {
         <Grid gutter="md">
           <GridItem lg={1}>
             <SimpleChart chartLegend={policyChartLegend} isLegend={true} clientName={this.props.client} title={"Today"}/>
+            <p>Review Policy (New)<br/>
+              Review Policy (Endorsement)<br/>
+              Review Policy (MTA)<br/>
+              New Endorsement<br/>
+              Cancel policy<br/>
+              Premium Refunds<br/>
+              Premium Outstanding<br/>
+              Reinstate Policy<br/>
+              Renew Policy<br/>
+              Issue Policy (Authorise/Release)<br/></p>
           </GridItem>
           <GridItem lg={2}>
             <SimpleChart chartData={policyChartDataToday} clientName={this.props.client} title={"Today"}/>

@@ -3,37 +3,30 @@ import {
   Grid,
   GridItem,
   PageSection,
-  PageSectionVariants,
-  Text,
   TextContent
 } from "@patternfly/react-core";
 import ClaimForm from "./ClaimForm";
 import SimpleChart from "../SimpleChart";
 import ClaimTasks from './ClaimTasks';
 import { claimChartDataThisMonth, claimChartDataToday, claimChartLegend } from "../../integration/Integration";
+import PageTopSection from '../../base_components/PageTopSection';
 
 class PageTopSectionClaim extends React.Component {
-  render () {
+  render() {
     return (
-      <PageSection variant={PageSectionVariants.light}>
-        <Grid>
-          <GridItem lg={6}>
-            <TextContent>
-              <Text component="h1">Claim <b>{this.props.client}</b></Text>
-            </TextContent>
-          </GridItem>
-          <GridItem lg={6}>
-            <TextContent>
-              <div style={{textAlign: "right"}}>
-                <ClaimForm/>
-              </div>
-            </TextContent>
-          </GridItem>
-        </Grid>
-      </PageSection>
+      <PageTopSection
+        client={this.props.client}
+        title={'Claim'}
+        rightSection={<TextContent>
+          <div style={{textAlign: "right"}}>
+            <ClaimForm/>
+          </div>
+        </TextContent>}
+      />
     )
   }
 }
+
 
 class PageBottomSectionClaim extends React.Component {
   render() {
