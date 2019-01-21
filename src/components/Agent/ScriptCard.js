@@ -12,7 +12,7 @@ class ScriptCard extends React.Component {
   }
 
   onNext(newPos) {
-    // TODO: user newPos to examine scriptData, then find array position
+    // TODO: use newPos to examine scriptData, then find array position
     this.setState({scriptPos:newPos});
   }
 

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15d1e49e-c3ac-4bf7-8c69-a5c1a81bfb8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Agent/CustomerDetails.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Agent/IDVForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Agent/PolicyList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Agent/SearchForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Agent/SearchResults.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base_components/PageToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/base_components/PageToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Agent/Agent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Agent/Agent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Agent/AgentScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Agent/ScriptCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/integration/Integration.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/integration/Integration.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="21" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+            <state relative-caret-position="548">
+              <caret line="64" column="4" selection-start-line="61" selection-start-column="2" selection-end-line="64" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -32,10 +38,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base_components/PageTopSection.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+            <state relative-caret-position="969">
+              <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -44,10 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/SearchResults.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="629">
+              <caret line="37" column="3" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="37" selection-end-column="3" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -56,19 +62,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/CustomerDetails.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
+            <state relative-caret-position="2091">
+              <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/PolicyList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#175#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/IDVForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="103" column="51" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="51" />
+            <state relative-caret-position="435">
+              <caret line="38" column="78" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="78" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -77,10 +98,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/SearchForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="40" column="3" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
+            <state relative-caret-position="520">
+              <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -89,10 +110,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/base_components/PageToolbar.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+            <state relative-caret-position="1598">
+              <caret line="94" column="62" selection-end-line="252" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Agent/ScriptCard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="44" column="26" selection-start-line="4" selection-end-line="44" selection-end-column="26" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -103,26 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+            <state relative-caret-position="506">
+              <caret line="49" column="98" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -166,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/components/SimpleForm.js" />
         <option value="$PROJECT_DIR$/src/components/PageTopSectionEnrolment.js" />
         <option value="$PROJECT_DIR$/src/components/SimpleTable.js" />
-        <option value="$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/index.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js" />
         <option value="$PROJECT_DIR$/src/components/Enrolment/EnrolmentModal.js" />
@@ -178,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/components/Policy/Enrolment.css" />
         <option value="$PROJECT_DIR$/src/components/SimpleChart.js" />
         <option value="$PROJECT_DIR$/src/components/KebabDropdown.js" />
-        <option value="$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js" />
         <option value="$PROJECT_DIR$/src/components/Policy/PolicyTasks.js" />
         <option value="$PROJECT_DIR$/src/components/Claim/ClaimTasks.js" />
         <option value="$PROJECT_DIR$/src/base_components/PageNav.js" />
@@ -191,10 +204,18 @@
         <option value="$PROJECT_DIR$/src/components/Claim/Claim.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/Customer/Agent.js" />
-        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
         <option value="$PROJECT_DIR$/src/base_components/PageToolbar.js" />
         <option value="$PROJECT_DIR$/src/components/Agent/AgentScript.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/ScriptCard.js" />
+        <option value="$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/SearchForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/SearchResults.js" />
+        <option value="$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/IDVForm.js" />
         <option value="$PROJECT_DIR$/src/components/Agent/Agent.js" />
+        <option value="$PROJECT_DIR$/src/integration/Integration.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/CustomerDetails.js" />
+        <option value="$PROJECT_DIR$/src/components/Agent/PolicyList.js" />
       </list>
     </option>
   </component>
@@ -210,6 +231,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,13 +268,6 @@
               <item name="deepsea-ui" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Claim" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="deepsea-ui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deepsea-ui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Policy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,7 +280,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,7 +349,8 @@
       <workItem from="1547025882553" duration="3583000" />
       <workItem from="1547544866707" duration="18360000" />
       <workItem from="1547638892502" duration="6614000" />
-      <workItem from="1547725757049" duration="13533000" />
+      <workItem from="1547725757049" duration="13578000" />
+      <workItem from="1548057717593" duration="15987000" />
     </task>
     <task id="LOCAL-00001" summary="Playing with Navigation">
       <created>1547498281598</created>
@@ -386,11 +401,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547753077434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="more agent work">
+      <created>1547757898373</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547757898373</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80646000" />
+    <option name="totallyTimeSpent" value="96678000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,6 +425,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.23087339" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.23087339" />
@@ -414,7 +437,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32977462" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32977462" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32858837" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
@@ -437,7 +460,8 @@
     <MESSAGE value="refactoring as I learn" />
     <MESSAGE value="refactored header" />
     <MESSAGE value="adding agent pages, and splitting roles" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding agent pages, and splitting roles" />
+    <MESSAGE value="more agent work" />
+    <option name="LAST_COMMIT_MESSAGE" value="more agent work" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/Avatar.js">
@@ -479,27 +503,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SimpleModal.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="31" column="26" selection-start-line="18" selection-start-column="16" selection-end-line="31" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -587,29 +594,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="240" column="41" selection-start-line="240" selection-start-column="41" selection-end-line="240" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyTasks.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -665,28 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base_components/PageTopSection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="153">
           <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="40" column="3" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -695,8 +665,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base_components/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="68">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -705,15 +675,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/KebabDropdown.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
+        <state relative-caret-position="17">
           <caret line="1" column="44" selection-start-line="1" selection-start-column="44" selection-end-line="1" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PageLayoutHorizontalNav.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
+        <state relative-caret-position="1037">
           <caret line="103" column="51" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base_components/PageNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="40" column="3" selection-start-line="31" selection-start-column="2" selection-end-line="40" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -722,8 +702,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base_components/PageToolbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
+        <state relative-caret-position="867">
           <caret line="67" column="57" selection-start-line="67" selection-start-column="57" selection-end-line="67" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Policy/PolicyTasks.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="85" column="26" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="85" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/ScriptCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="26" selection-start-line="4" selection-end-line="44" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Policy/EnrolmentForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="62" selection-end-line="252" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="26" selection-start-line="18" selection-start-column="16" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/SearchForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@patternfly/react-core/dist/esm/components/Avatar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Policy/Policy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="64" column="4" selection-start-line="61" selection-start-column="2" selection-end-line="64" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -732,22 +789,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/integration/Integration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="506">
+          <caret line="49" column="98" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Agent/AgentScript.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/IDVForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="67" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
+        <state relative-caret-position="435">
+          <caret line="38" column="78" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Agent/Agent.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/CustomerDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        <state relative-caret-position="2091">
+          <caret line="123" column="27" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/SearchResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Agent/PolicyList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="50" column="40" selection-start-line="50" selection-start-column="40" selection-end-line="50" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#175#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

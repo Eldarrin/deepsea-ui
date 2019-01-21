@@ -10,6 +10,7 @@
     "@patternfly/react-styles": "^2.3.0",
     "@patternfly/react-table": "^0.2.39",
     "@patternfly/react-tokens": "latest",
+    "moment": "^2.23.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router": "^4.3.1",
