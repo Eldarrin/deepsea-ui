@@ -44,11 +44,16 @@ class PolicyList extends React.Component {
     this.setState({warning: null})
   }
 
+  handleChange(e) {
+    this.props.onChange(e.target.checked);
+  }
+
   componentDidMount() {
     let policies = policyList.map((pol) => {
       return(
         <DataListItem key={pol.policyId} aria-labelledby="simple-item1">
-          <DataListCheck onClick={() => this.clearAlert()} aria-labelledby="check-action-item1" name="check-action-check1"/>
+          <DataListCheck onClick={() => this.clearAlert()} aria-labelledby="check-action-item1" name="check-action-check1"
+            onChange={ this.handleChange }/>
           <DataListCell>
             <span id="simple-item1">{pol.policyType}</span>
           </DataListCell>
@@ -64,6 +69,7 @@ class PolicyList extends React.Component {
   render() {
     return (
       <div>
+        {this.state.warning}
         <div style={{textAlign: "right", marginBottom: "15px"}}>
           <Button variant="secondary">New Policy</Button>{' '}
           <Button onClick={() => this.raiseAlert()} variant="secondary">New Claim</Button>{' '}
@@ -73,7 +79,6 @@ class PolicyList extends React.Component {
         <DataList aria-label="Simple data list example">
           {this.state.policies}
         </DataList>
-        {this.state.warning}
       </div>
     )
   }
