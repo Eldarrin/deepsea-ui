@@ -77,7 +77,7 @@ class PolicyList extends React.Component {
         <div style={{textAlign: "right", marginBottom: "15px"}}>
           <Button variant="secondary">New Policy</Button>{' '}
           <Button onClick={() => this.raiseAlert()} variant="secondary">New Claim</Button>{' '}
-          <Button variant="secondary">New Endorsement</Button>{' '}
+          <Button onClick={() => this.raiseAlert()} variant="secondary">New Endorsement</Button>{' '}
 
         </div>
         <DataList aria-label="Simple data list example">
