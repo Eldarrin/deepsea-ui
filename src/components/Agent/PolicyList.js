@@ -6,16 +6,11 @@ import {
   DataListCheck,
   DataListItem,
   GalleryItem,
-  GridItem
+  GridItem,
+  Radio
 } from "@patternfly/react-core";
 import React from "react";
-import {searchData} from "../../integration/Integration";
-
-const policyList = [
-  { "policyId" : 1, "policyType" : "Home Insurance", "sumInsured" : 450000 },
-  { "policyId" : 2, "policyType" : "Yacht Insurance", "sumInsured" : 90000 }
-
-];
+import {policyList} from "../../integration/Integration";
 
 class PolicyList extends React.Component {
   constructor(props) {
@@ -23,7 +18,9 @@ class PolicyList extends React.Component {
     this.state = {
       policies : [],
       warning: null,
+      policySelected: '',
     }
+    this.handleChange = this.handleChange.bind(this);
   }
 
   doNothing() {
@@ -37,25 +34,32 @@ class PolicyList extends React.Component {
   }
 
   raiseAlert() {
-    this.setState({warning: this.getAlert("You haven't selected a policy")})
+    if (this.state.policySelected === '') {
+      this.setState({warning: this.getAlert("You haven't selected a policy")})
+    }
+
   }
 
   clearAlert() {
     this.setState({warning: null})
   }
 
-  handleChange(e) {
-    this.props.onChange(e.target.checked);
+  handleChange = (_, event) => {
+    const { value } = event.currentTarget;
+    this.setState({ policySelected:value });
   }
 
   componentDidMount() {
     let policies = policyList.map((pol) => {
       return(
         <DataListItem key={pol.policyId} aria-labelledby="simple-item1">
-          <DataListCheck onClick={() => this.clearAlert()} aria-labelledby="check-action-item1" name="check-action-check1"
-            onChange={ this.handleChange }/>
           <DataListCell>
-            <span id="simple-item1">{pol.policyType}</span>
+            <Radio onClick={() => this.clearAlert()}
+                   value={"policy" + pol.policyId}
+                   onChange={this.handleChange}
+                   label={pol.policyType}
+                   id={"rad" + pol.policyId}
+                   name="policy-select-radio" />
           </DataListCell>
           <DataListCell>
             Sum Insured: £{pol.sumInsured}
@@ -79,9 +83,19 @@ class PolicyList extends React.Component {
         <DataList aria-label="Simple data list example">
           {this.state.policies}
         </DataList>
+        {this.state.policySelected}
       </div>
     )
   }
 }
 
 export default PolicyList;
+
+/*
+
+          <DataListCheck  aria-labelledby="check-action-item1" name="check-action-check1"
+            onChange={ this.handleChange }/>
+
+            <span id="simple-item1">{pol.policyType}</span>
+
+ */

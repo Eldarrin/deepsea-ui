@@ -20,6 +20,13 @@ export const searchData = [
 export const scriptData = [{ "step" : 0, "stepName" : "Welcome", "stepScript" : "Hi there, Mort speaking, how may I help you today?", "nextStep" : 1 },
   { "step" : 1, "stepName" : "Search Details", "stepScript" : "Could I please get your policy no?/name?/etc?", "nextStep" : 2 },
   { "step" : 2, "stepName" : "Notice", "stepScript" : "Please note all calls are recorded...", "nextStep" : 0 }];
+
+export const policyList = [
+  { "policyId" : 1, "policyType" : "Home Insurance", "sumInsured" : 450000 },
+  { "policyId" : 2, "policyType" : "Yacht Insurance", "sumInsured" : 90000 }
+
+];
+
 /*
     fetch('http://deepsea-ui-menu.xxx.xxx/api/menu/')
       .then(menu => {
