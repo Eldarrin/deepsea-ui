@@ -6,6 +6,8 @@ Totally experimental, learning project for myself to ensure we have a beautiful 
 
 ### Components
 ReactJS, with Patternfly4 react
+####SubComponents
+Rechart, Moment
 
 ### Business Architecture / UX Principles
 The user model behind this is going to be role focused, such as Agent pages, Policy Admin pages, Claim Assessor pages etc.

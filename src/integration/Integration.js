@@ -43,7 +43,7 @@ export const policyList = [
     })
      */
 
-export const menu = [{ "menuId" : 0, "menuName" : "Dashboard", "menuPage" : "blank", "navLink" : "#"},
+export const menu = [{ "menuId" : 0, "menuName" : "Dashboard", "menuPage" : "dashboard", "navLink" : "#"},
   { "menuId" : 1, "menuName" : "Agent", "menuPage" : "customer", "navLink" : "#"},
   { "menuId" : 2, "menuName" : "Policy", "menuPage" : "policy", "navLink" : "#"},
   { "menuId" : 3, "menuName" : "Claim", "menuPage" : "claim", "navLink" : "#"},

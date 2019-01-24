@@ -39,7 +39,7 @@ import { BellIcon, CogIcon } from '@patternfly/react-icons';
 import brandImg from '../images/brand_logo_white.svg'; // './l_pf-reverse-164x11.png';
 import avatarImg from '../images/avatar.png';
 
-import DashboardBottomSection from './Dashboard';
+import DashboardBottomSection from './Dashboard/Dashboard';
 import EnrolmentModal from './Policy/EnrolmentModal';
 import SimpleChart from "./SimpleChart";
 import SimpleTable from './SimpleTable';
