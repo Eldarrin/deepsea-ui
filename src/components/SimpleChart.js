@@ -54,7 +54,7 @@ class SimpleChart extends React.Component {
 
     getTooltipLabel = (datum) => {
         return `${datum.x}: ${datum.y}`;
-    }
+    };
 //{this.getLegend(ChartTheme.light.blue, false)}
     render() {
         if (this.props.isLegend) {

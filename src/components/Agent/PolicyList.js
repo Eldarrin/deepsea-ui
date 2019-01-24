@@ -1,12 +1,9 @@
 import {
   Alert,
-  Button, Card, CardBody, CardHeader,
+  Button,
   DataList,
   DataListCell,
-  DataListCheck,
   DataListItem,
-  GalleryItem,
-  GridItem,
   Radio
 } from "@patternfly/react-core";
 import React from "react";
@@ -19,7 +16,7 @@ class PolicyList extends React.Component {
       policies : [],
       warning: null,
       policySelected: '',
-    }
+    };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -47,7 +44,7 @@ class PolicyList extends React.Component {
   handleChange = (_, event) => {
     const { value } = event.currentTarget;
     this.setState({ policySelected:value });
-  }
+  };
 
   componentDidMount() {
     let policies = policyList.map((pol) => {

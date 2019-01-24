@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-  Alert, Form,
+  Form,
   FormGroup,
   TextInput,
   TextArea,
   Button,
   PageSection, Grid, GridItem,
-  DataListCheck, DataList, DataListItem, DataListCell, GalleryItem, Card, CardHeader, CardBody
 } from '@patternfly/react-core';
 import {customerData} from "../../integration/Integration";
 import * as moment from 'moment';
@@ -34,7 +33,7 @@ class CustomerDetails extends React.Component {
   };
 
   render() {
-    const { value1, value2, value3, value4 } = this.state;
+
 
     return (
       <PageSection>

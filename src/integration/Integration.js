@@ -10,7 +10,7 @@ export const customerData = {
   "phoneNumber" : "(07123) 123 456",
   "address" : "1 The Street, The Town, The City",
   "postcode" : "SY1 1YY"
-}
+};
 
 export const searchData = [
   { "id" : 1, "name" : "Mort Black", "address" : "1 the street", "postcode" : "SY1 1YY", "policyid" : 12345   },

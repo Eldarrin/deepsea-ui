@@ -6,14 +6,11 @@ import {
   CardFooter,
   Grid,
   GridItem,
-  PageSection,
-  PageSectionVariants,
-  Text,
-  TextContent, DataListItem, DataListCheck, DataListCell, DataListAction
+  PageSection
 } from "@patternfly/react-core";
 import ShieldAltIcon from "@patternfly/react-icons/dist/js/icons/shield-alt-icon";
 import ErrorCircleOIcon from "@patternfly/react-icons/dist/js/icons/error-circle-o-icon";
-import {AreaChart, Area, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar, Legend} from 'recharts';
+import {AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar} from 'recharts';
 
 const dashTopData = [
   {"total": 23174, "bad": 118, "pods": 10, "zone": "Enrolment", "errorText": "failures"},
@@ -113,8 +110,8 @@ class DashboardBottomSection extends React.Component {
       dashTop: null,
       graphA: null,
       graphB: null,
-    }
-    this.graphA = React.createRef()
+    };
+    this.graphA = React.createRef();
     this.graphB = React.createRef()
   }
 
@@ -131,7 +128,7 @@ class DashboardBottomSection extends React.Component {
     });
     this.setState({dashTop: dashTop});
 
-    this.setState({graphA: <LongGraph width={this.graphA.current.offsetWidth}/>})
+    this.setState({graphA: <LongGraph width={this.graphA.current.offsetWidth}/>});
     this.setState({graphB: <ShortGraph width={this.graphB.current.offsetWidth}/>})
   }
 

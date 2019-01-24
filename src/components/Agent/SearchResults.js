@@ -3,7 +3,7 @@ import {searchData} from "../../integration/Integration";
 import {
   Card,
   CardBody,
-  CardHeader, Form,
+  CardHeader,
   Gallery,
   GalleryItem,
   Text,
