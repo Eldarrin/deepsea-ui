@@ -11,6 +11,7 @@ import {
 import ShieldAltIcon from "@patternfly/react-icons/dist/js/icons/shield-alt-icon";
 import ErrorCircleOIcon from "@patternfly/react-icons/dist/js/icons/error-circle-o-icon";
 import {AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, BarChart, Bar} from 'recharts';
+import CoinsIcon from "@patternfly/react-icons/dist/js/icons/coins-icon";
 
 const dashTopData = [
   {"total": 23174, "bad": 118, "pods": 10, "zone": "Enrolment", "errorText": "failures"},
@@ -34,10 +35,10 @@ const data = [
 ];
 
 const dataBar = [
-  {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
-  {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
-  {name: 'Page C', uv: 2000, pv: 9800, amt: 2290},
-  {name: 'Page D', uv: 2780, pv: 3908, amt: 2000},
+  {name: 'EU', Premium: 4000, ClaimCost: 2400, amt: 2400},
+  {name: 'LATAM', Premium: 3000, ClaimCost: 1398, amt: 2210},
+  {name: 'US', Premium: 2000, ClaimCost: 9800, amt: 2290},
+  {name: 'AsiaPacific', Premium: 2780, ClaimCost: 3908, amt: 2000},
 ];
 
 //import SimpleChart from './SimpleChart';
@@ -47,14 +48,16 @@ class DashItemStd extends React.Component {
     return (
       <GridItem span={2}>
         <Card style={{textAlign: "center", borderTop: "2px solid #0088ce"}}>
-          <CardHeader style={{verticalAlign: "center"}}>
-            {this.props.total} {this.props.header}
+          <CardHeader style={{verticalAlign: "middle"}}>
+            <CoinsIcon style={{position: "relative", color: "#f0ab00", top: "2px"}}/> {this.props.total} {this.props.header}
           </CardHeader>
           <CardBody>
-            <ErrorCircleOIcon style={{color: "red"}}/> {this.props.bad} {this.props.errorText}
+
+            <ErrorCircleOIcon style={{position: "relative", color: "red", top: "2px"}}/> {this.props.bad} {this.props.errorText}
+
           </CardBody>
           <CardFooter>
-            <ShieldAltIcon style={{color: "green"}}/> {this.props.pods} Pods
+            <ShieldAltIcon style={{position: "relative", top: "2px", color: "green"}}/> {this.props.pods} Pods
           </CardFooter>
         </Card>
       </GridItem>
@@ -69,20 +72,20 @@ class LongGraph extends React.Component {
                  margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
         <defs>
           <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-            <stop offset="95%" stopColor="#8884d8" stopOpacity={0}/>
+            <stop offset="5%" stopColor="#0088cc" stopOpacity={0.8}/>
+            <stop offset="95%" stopColor="#0088cc" stopOpacity={0}/>
           </linearGradient>
           <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8}/>
-            <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
+            <stop offset="5%" stopColor="#2d7623" stopOpacity={0.8}/>
+            <stop offset="95%" stopColor="#2d7623" stopOpacity={0}/>
           </linearGradient>
         </defs>
         <XAxis dataKey="name" />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
         <Tooltip />
-        <Area type="monotone" dataKey="ClaimCost" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
-        <Area type="monotone" dataKey="Premium" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
+        <Area type="monotone" dataKey="ClaimCost" stroke="#0088cc" fillOpacity={1} fill="url(#colorUv)" />
+        <Area type="monotone" dataKey="Premium" stroke="#2d7623" fillOpacity={1} fill="url(#colorPv)" />
       </AreaChart>
     )
   }
@@ -96,8 +99,8 @@ class ShortGraph extends React.Component {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Bar dataKey="pv" fill="#8884d8" />
-        <Bar dataKey="uv" fill="#82ca9d" />
+        <Bar dataKey="ClaimCost" fill="#0088cc" />
+        <Bar dataKey="Premium" fill="#2d7623" />
       </BarChart>
     )
   }
